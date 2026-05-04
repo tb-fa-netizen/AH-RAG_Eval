@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>hybrid_rag_v1 — RAG Evaluation Report</title>
+  <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+  <style>
+    :root {
+      --primary: #4f46e5; --bg: #f8f9fb; --card: #ffffff;
+      --border: #e2e8f0; --text: #1e293b; --muted: #64748b;
+      --green: #22c55e; --amber: #f59e0b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg);
+             color: var(--text); line-height: 1.6; }
+    .hero { background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+              color: white; padding: 2.5rem 3rem; }
+    .hero h1 { font-size: 2rem; font-weight: 700; margin-bottom: .25rem; }
+    .hero p  { opacity: .85; font-size: .95rem; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
+    .card { background: var(--card); border: 1px solid var(--border);
+              border-radius: 12px; padding: 1.75rem; margin-bottom: 2rem;
+              box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+    h2 { font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem;
+           color: var(--primary); }
+    h3 { font-size: 1.05rem; font-weight: 600; margin: 1.5rem 0 .75rem; }
+    table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+    th { background: #f1f5f9; text-align: left; padding: .6rem .9rem;
+           font-weight: 600; border-bottom: 2px solid var(--border); }
+    td { padding: .55rem .9rem; border-bottom: 1px solid var(--border); }
+    tr.highlight td { background: #eff6ff; font-weight: 600; }
+    tr:hover td { background: #f8faff; }
+    .badge { display: inline-block; padding: .2rem .6rem; border-radius: 99px;
+               font-size: .75rem; font-weight: 600; background: #ede9fe;
+               color: var(--primary); }
+    .latex-box { background: #1e1e2e; color: #cdd6f4; border-radius: 8px;
+                   padding: 1.25rem; font-family: monospace; font-size: .8rem;
+                   overflow-x: auto; white-space: pre; margin-top: .75rem; }
+    .chart-wrap { height: 420px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    @media(max-width:768px){ .grid-2 { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<div class="hero">
+  <h1>🔬 hybrid_rag_v1</h1>
+  <p>Advanced Hybrid RAG System · Evaluation Report · 2026-05-03 23:36</p>
+</div>
+
+<div class="container">
+
+  <!-- Medical -->
+  <div class="card">
+    <h2>🏥 Medical Domain — PubMedQA</h2>
+    <p style="color:var(--muted);margin-bottom:1rem;font-size:.9rem">
+      Hybrid BM25+Dense retrieval with BGE reranker evaluated on biomedical Q&A.
+      Metrics: Context Precision@5, Context Recall (sentence), Medical Entity F1,
+      PubMedQA Decision Accuracy, MRR.
+    </p>
+    
+    <table>
+      <thead><tr><th>variant</th><th>CP@5</th><th>CR (sentence)</th><th>Med. Entity F1</th><th>Decision Acc. (PubMedQA)</th><th>MRR</th></tr></thead>
+      <tbody><tr class='highlight'><td>🔀 Hybrid + Rerank (Ours)</td><td>—</td><td>0.370 ± 0.200</td><td>0.216 ± 0.144</td><td>0.420 ± 0.494</td><td>1.000 ± 0.000</td></tr></tbody>
+    </table>
+    <div class="chart-wrap" id="medChart" style="margin-top:1.5rem"></div>
+  </div>
+
+  <!-- Legal -->
+  <div class="card">
+    <h2>⚖️ Legal Domain — LegalBench-RAG</h2>
+    <p style="color:var(--muted);margin-bottom:1rem;font-size:.9rem">
+      Character-level precision retrieval on legal corpora (79M chars, expert-annotated).
+      Metrics: Context Precision@5, Context Recall, Char Precision/Recall, MRR.
+    </p>
+    
+    <table>
+      <thead><tr><th>variant</th><th>CP@5</th><th>CR (sentence)</th><th>Char Prec. (Legal)</th><th>Char Recall (Legal)</th><th>MRR</th></tr></thead>
+      <tbody><tr class='highlight'><td>🔀 Hybrid + Rerank (Ours)</td><td>0.591 ± 0.415</td><td>0.330 ± 0.454</td><td>1.000 ± 0.000</td><td>0.989 ± 0.027</td><td>0.620 ± 0.438</td></tr></tbody>
+    </table>
+    <div class="chart-wrap" id="legChart" style="margin-top:1.5rem"></div>
+  </div>
+
+  <!-- LaTeX tables -->
+  <div class="card">
+    <h2>📄 Paper-Ready LaTeX Tables</h2>
+    <h3>Medical (PubMedQA)</h3>
+    <div class="latex-box">\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{lccccc}
+\toprule
+\textbf{variant} & \textbf{CP@5} & \textbf{CR (sentence)} & \textbf{Med. Entity F1} & \textbf{Decision Acc. (PubMedQA)} & \textbf{MRR} \\
+\midrule
+🔀 Hybrid + Rerank (Ours) & — & 0.370 ± 0.200 & 0.216 ± 0.144 & 0.420 ± 0.494 & 1.000 ± 0.000 \\
+\bottomrule
+\end{tabular}
+\caption{Medical RAG Evaluation Results (PubMedQA)}
+\label{{tab:rag_eval}}
+\end{table}</div>
+    <h3>Legal (LegalBench-RAG)</h3>
+    <div class="latex-box">\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{lccccc}
+\toprule
+\textbf{variant} & \textbf{CP@5} & \textbf{CR (sentence)} & \textbf{Char Prec. (Legal)} & \textbf{Char Recall (Legal)} & \textbf{MRR} \\
+\midrule
+🔀 Hybrid + Rerank (Ours) & 0.591 ± 0.415 & 0.330 ± 0.454 & 1.000 ± 0.000 & 0.989 ± 0.027 & 0.620 ± 0.438 \\
+\bottomrule
+\end{tabular}
+\caption{Legal RAG Evaluation Results (LegalBench-RAG)}
+\label{{tab:rag_eval}}
+\end{table}</div>
+  </div>
+
+</div>
+
+<script>
+const layout = {
+  barmode: 'group',
+  plot_bgcolor: '#fff',
+  paper_bgcolor: '#fff',
+  font: { family: 'Inter, sans-serif', size: 12 },
+  yaxis: { range: [0, 1], gridcolor: '#e2e8f0', title: 'Score' },
+  xaxis: { gridcolor: '#e2e8f0' },
+  legend: { orientation: 'h', y: -0.2 },
+  margin: { t: 30, b: 80 },
+};
+const cfg = { responsive: true };
+
+Plotly.newPlot('medChart', [{"name": "CR (sentence)", "x": ["\ud83d\udd00 Hybrid + Rerank (Ours)"], "y": [0.3704], "error_y": [0.2004], "type": "bar"}, {"name": "Med. Entity F1", "x": ["\ud83d\udd00 Hybrid + Rerank (Ours)"], "y": [0.216], "error_y": [0.1439], "type": "bar"}, {"name": "Decision Acc. (PubMedQA)", "x": ["\ud83d\udd00 Hybrid + Rerank (Ours)"], "y": [0.42], "error_y": [0.4936], "type": "bar"}, {"name": "MRR", "x": ["\ud83d\udd00 Hybrid + Rerank (Ours)"], "y": [1.0], "error_y": [0.0], "type": "bar"}], {...layout, title: 'Medical Metrics by Variant'}, cfg);
+Plotly.newPlot('legChart', [{"name": "CP@5", "x": ["\ud83d\udd00 Hybrid + Rerank (Ours)"], "y": [0.5905], "error_y": [0.4151], "type": "bar"}, {"name": "CR (sentence)", "x": ["\ud83d\udd00 Hybrid + Rerank (Ours)"], "y": [0.33], "error_y": [0.454], "type": "bar"}, {"name": "Char Prec. (Legal)", "x": ["\ud83d\udd00 Hybrid + Rerank (Ours)"], "y": [1.0], "error_y": [0.0], "type": "bar"}, {"name": "Char Recall (Legal)", "x": ["\ud83d\udd00 Hybrid + Rerank (Ours)"], "y": [0.9893], "error_y": [0.0271], "type": "bar"}, {"name": "MRR", "x": ["\ud83d\udd00 Hybrid + Rerank (Ours)"], "y": [0.62], "error_y": [0.4385], "type": "bar"}], {...layout, title: 'Legal Metrics by Variant'}, cfg);
+</script>
+</body>
+</html>

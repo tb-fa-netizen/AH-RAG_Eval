@@ -1,0 +1,1398 @@
+{
+  "domain": "medical",
+  "variant": "hybrid",
+  "aggregate": {
+    "context_precision_at_1": {
+      "mean": 1.0,
+      "std": 0.0,
+      "n": 50
+    },
+    "context_recall_token": {
+      "mean": 1.0,
+      "std": 0.0,
+      "n": 50
+    },
+    "context_recall_sentence": {
+      "mean": 0.37044849594849594,
+      "std": 0.20037703915992727,
+      "n": 50
+    },
+    "mrr": {
+      "mean": 1.0,
+      "std": 0.0,
+      "n": 50
+    },
+    "retrieval_medical_coverage": {
+      "mean": 0.4731401868662738,
+      "std": 0.21931438521108196,
+      "n": 50
+    },
+    "med_entity_precision": {
+      "mean": 0.2347547830715821,
+      "std": 0.1970000162116031,
+      "n": 50
+    },
+    "med_entity_recall": {
+      "mean": 0.2447946623297882,
+      "std": 0.19290764221810278,
+      "n": 50
+    },
+    "med_entity_f1": {
+      "mean": 0.2160024062070098,
+      "std": 0.14390778084002798,
+      "n": 50
+    },
+    "decision_match": {
+      "mean": 0.42,
+      "std": 0.4935585071701226,
+      "n": 50
+    },
+    "context_precision_at_3": {
+      "mean": 1.0,
+      "std": 0.0,
+      "n": 18
+    }
+  },
+  "samples": [
+    {
+      "sample_id": "medical_0",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Is eligibility for a chemotherapy protocol a good prognostic factor for invasive bladder cancer after radical cystectomy?",
+      "ground_truth": "These data suggest that being willing and fit enough for a chemotherapy protocol is a good prognostic factor for invasive bladder cancer. This eligibility bias emphasizes the need for prospective, randomized trials, and indicates that single-group studies using historical or matched controls have to be interpreted with caution.",
+      "retrieved_chunks": [
+        "To assess whether eligibility to an adjuvant chemotherapy protocol in itself represents a good prognostic factor after radical cystectomy for bladder cancer. Between April 1984 and May 1989, our institution entered 35 patients with invasive bladder cancer into the Swiss Group for Clinical and Epidemiological Cancer Research (SAKK) study 09/84. They were randomly assigned to either observation or three postoperative courses of cisplatin monotherapy after cystectomy. This study had a negative result. The outcome of these 35 patients (protocol group) was compared with an age- and tumor-stage-matched cohort (matched group; n = 35) who also underwent cystectomy during the same period, but were not entered into the SAKK study, as well as the remaining 57 patients treated during the study period for the same indication (remaining group).",
+        "Median overall survival decreased from 76.3 months in the protocol group to 52.1 months in the matched group and to 20.3 months in the remaining group. The respective times of median recurrence-free survival were 67.2, 16.0, and 9.4 months. Tumor progression occurred in 46% of the protocol group compared with 69% in the matched group and 65% in the remaining group (P<.05). Cancer-related death was noted in 40% of the protocol group, 57% in the matched group, and 56% in the remaining group."
+      ],
+      "generated_answer": "Eligibility for a chemotherapy protocol does not appear to be a good prognostic factor for invasive bladder cancer after radical cystectomy, as the outcomes for patients in the protocol group were not significantly better than those in the other groups. In fact, the median overall survival and recurrence-free survival times were lower in the protocol group compared to the matched and remaining groups. Additionally, the rate of tumor progression and cancer-related death was not significantly lower in the protocol group.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.4444444444444444,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.16666666666666666,
+        "med_entity_precision": 0.25,
+        "med_entity_recall": 0.3333333333333333,
+        "med_entity_f1": 0.28571428571428575,
+        "decision_match": 0.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 160.79470810526982,
+      "error": null
+    },
+    {
+      "sample_id": "medical_1",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Delayed imaging in routine CT examinations of the abdomen and pelvis: is it worth the additional cost of radiation and time?",
+      "ground_truth": "An additional delayed phase through the abdomen in routine contrast-enhanced CT examinations of the abdomen and pelvis is of low yield, particularly if reliable follow-up imaging to further elucidate uncertain findings is available.",
+      "retrieved_chunks": [
+        "The purpose of this study was to retrospectively assess the potential benefits of delayed phase imaging series in routine CT scans of the abdomen and pelvis. Routine contrast-enhanced abdominopelvic CT scans of 1000 consecutively examined patients (912 men, 88 women; average age, 60 years; range, 22-94 years) were retrospectively evaluated, and the added benefits of the delayed phase series through the abdomen were recorded for each examination. Examinations performed for indications requiring multiphasic imaging were excluded. Images were reviewed by two fellowship-trained abdominal radiologists, who were blinded to official CT reports. All examinations were performed between July 2008 and February 2010 at a single institution. Radiation doses for both the portal venous and delayed phases, when available, were analyzed to assess the effect of the delayed phase on overall radiation exposure.",
+        "In the other 958 patients (95.8%), delayed imaging was of no benefit. In addition, use of the delayed phase resulted in a mean 59.5% increase in effective radiation dose.",
+        "Radiation doses for both the portal venous and delayed phases, when available, were analyzed to assess the effect of the delayed phase on overall radiation exposure. Forty-two patients (4.2%) had findings that were further characterized or were observed only in the delayed phase. Most were incidental findings that could have been confirmed at noninvasive follow-up imaging, such as sonography or unenhanced CT or MRI. The most common findings were liver hemangioma (n = 12), adrenal adenoma (n = 12), and parapelvic renal cysts (n = 6). The most important finding was detection of a renal mass in one patient (0.1%). The mass was seen only on the delayed phase images but was difficult to appreciate in the portal venous phase. In the other 958 patients (95.8%), delayed imaging was of no benefit."
+      ],
+      "generated_answer": "The benefits of delayed imaging in routine CT examinations of the abdomen and pelvis are limited, as it resulted in no additional benefits for 95.8% of patients. However, in a small percentage of cases, delayed imaging can provide valuable information that may not be apparent in the initial images. \n\nWhile the additional radiation exposure from delayed imaging is a concern, the detection of significant findings, such as a renal mass, can be crucial for patient care. The decision to use delayed imaging should be made on a case-by-case basis, weighing the potential benefits against the potential risks and costs.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_precision_at_3": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.23076923076923078,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.6,
+        "med_entity_precision": 0.21739130434782608,
+        "med_entity_recall": 0.5,
+        "med_entity_f1": 0.30303030303030304,
+        "decision_match": 1.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 28.223815654870123,
+      "error": null
+    },
+    {
+      "sample_id": "medical_2",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Does the SCL 90-R obsessive-compulsive dimension identify cognitive impairments?",
+      "ground_truth": "Our data suggest that the SCL 90-R is best viewed as an indicator of unidimensional emotional distress and somatic effects of structural brain injury.",
+      "retrieved_chunks": [
+        "To investigate the relevance of the Symptom Checklist 90-R Obsessive-Compulsive subscale to cognition in individuals with brain tumor. A prospective study of patients assessed with a neuropsychological test battery. A university medical center. Nineteen adults with biopsy-confirmed diagnoses of malignant brain tumors were assessed prior to aggressive chemotherapy. Included in the assessment were the Mattis Dementia Rating Scale, California Verbal Learning Test, Trail Making Test B, Symptom Checklist 90-R, Mood Assessment Scale, Beck Anxiety Inventory, and Chronic Illness Problem Inventory. The SCL 90-R Obsessive-Compulsive subscale was not related to objective measures of attention, verbal memory, or age.",
+        "The SCL 90-R Obsessive-Compulsive subscale was not related to objective measures of attention, verbal memory, or age. It was related significantly to symptoms of depression (r = .81, P<.005), anxiety (r = .66, P<.005), and subjective complaints of memory problems (r = .75, P<.005). Multivariate analyses indicated that reported symptoms of depression contributed 66% of the variance in predicting SCL 90-R Obsessive-Compulsive Scores, whereas symptoms of anxiety contributed an additional 6% (P<.0001)."
+      ],
+      "generated_answer": "The SCL 90-R Obsessive-Compulsive subscale does not appear to be directly related to objective measures of cognitive impairments. However, it is related to subjective complaints of memory problems.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.5,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.14285714285714285,
+        "med_entity_precision": 0.14285714285714285,
+        "med_entity_recall": 0.14285714285714285,
+        "med_entity_f1": 0.14285714285714285,
+        "decision_match": 0.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 24.134619028307498,
+      "error": null
+    },
+    {
+      "sample_id": "medical_3",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Is it possible to stop treatment with nucleos(t)ide analogs in patients with e-antigen negative chronic hepatitis B?",
+      "ground_truth": "The results suggest that NA treatment can be stopped in selected patients with CHB as long as they are not cirrhotic, have completed a minimum period of treatment, have normal ALT and sustained undetectable DNA. These patients should be closely monitored during the first year and then indefinitely.",
+      "retrieved_chunks": [
+        "Treatment of HBeAg-negative chronic hepatitis B (CHB) with nucleos(t)ide analogues (NA) is usually indefinite, since the loss of HBsAg, as a criterion for its discontinuation, is a rare event. Recent evidence suggests that discontinuing NA therapy may be feasible in selected patients. To analyze the rate of virological relapse in patients with HBeAg-negative CHB who discontinued treatment with NAs. We performed a single-center observational study that included 140 patients with HBsAg-negative CHB. Twenty-two patients, who received only NAs, discontinued treatment for different reasons and were subsequently monitored. All had normal ALT and AST, undetectable DNA and absence of cirrhosis or significant comorbidities before stopping treatment. Twelve patients showed virologic relapse (54.54%).",
+        "Twelve patients showed virologic relapse (54.54%). The mean interval between discontinuation and relapse was 6.38 months (\u00b1 1.9) (75% relapsed during the first 12 months after discontinuation). Five received adefovir, 1 lamivudine and adefovir, 1 tenofovir and 5 lamivudine alone. The mean treatment duration in this group was 38.5 months (\u00b1 4.5). The sustained response group had a higher mean age and longer treatment duration than patients with virologic relapse but these differences were not statistically significant."
+      ],
+      "generated_answer": "Yes, it may be feasible to stop treatment with nucleos(t)ide analogs in selected patients with e-antigen negative chronic hepatitis B, although the risk of virological relapse is present.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.2727272727272727,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.6923076923076923,
+        "med_entity_precision": 0.1111111111111111,
+        "med_entity_recall": 0.07692307692307693,
+        "med_entity_f1": 0.09090909090909093,
+        "decision_match": 0.0,
+        "predicted_decision": "yes"
+      },
+      "latency_s": 27.530503240879625,
+      "error": null
+    },
+    {
+      "sample_id": "medical_4",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "The influence of atmospheric pressure on aortic aneurysm rupture--is the diameter of the aneurysm important?",
+      "ground_truth": "The results of this study do not support the hypothesis that there is a direct link between atmospheric pressure values and abdominal aortic aneurysm ruptures.",
+      "retrieved_chunks": [
+        "The rate of aortic aneurysm rupture correlates with the aneurysm's diameter, and a higher rate of rupture is observed in patients with larger aneurysms. According to the literature, contradictory results concerning the relationship between atmospheric pressure and aneurysm size have been reported.AIM: In this paper, we assessed the influence of changes in atmospheric pressure on abdominal aneurysm ruptures in relationship to the aneurysm's size. The records of 223 patients with ruptured abdominal aneurysms were evaluated. All of the patients had been admitted to the department in the period 1997-2007 from the Silesia region. The atmospheric pressures on the day of the rupture and on the days both before the rupture and between the rupture events were compared. The size of the aneurysm was also considered in the analysis.",
+        "The size of the aneurysm was also considered in the analysis. There were no statistically significant differences in pressure between the days of rupture and the remainder of the days within an analysed period. The highest frequency of the admission of patients with a ruptured aortic aneurysm was observed during periods of winter and spring, when the highest mean values of atmospheric pressure were observed; however, this observation was not statistically confirmed. A statistically non-significant trend towards the higher rupture of large aneurysms (>7 cm) was observed in the cases where the pressure increased between the day before the rupture and the day of the rupture. This trend was particularly pronounced in patients suffering from hypertension (p = 0.1)."
+      ],
+      "generated_answer": "The diameter of the aneurysm appears to be a factor in the likelihood of rupture, with a higher rate of rupture observed in patients with larger aneurysms. However, the relationship between atmospheric pressure and aneurysm rupture is more complex and not entirely clear.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.3,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.0,
+        "med_entity_precision": 0.0,
+        "med_entity_recall": 0.0,
+        "med_entity_f1": 0.0,
+        "decision_match": 0.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 13.039408961776644,
+      "error": null
+    },
+    {
+      "sample_id": "medical_5",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Sternal skin conductance: a reasonable surrogate for hot flash measurement?",
+      "ground_truth": "Findings from these studies support discordance between device-recorded and self-reported hot flashes. In addition, the studies reveal further limitations of SSC monitoring, including difficulties with data collection and lack of consistency in interpretation. Based on these results and other recent trials identifying issues with SSC methodology, it is time to find a better physiologic surrogate measure for hot flashes.",
+      "retrieved_chunks": [
+        "This study aims to examine the accuracy of a new sternal skin conductance (SSC) device in measuring hot flashes and to assess the acceptability of the device by women. Three small descriptive pilot studies were performed using two sequential prototypes of the SSC device developed by an engineering device company in the Midwest. The devices were worn either in a monitored setting for 24 hours or in an ambulatory setting for 5 weeks. During the study period, women recorded hot flashes in a prospective hot flash diary and answered questions about the acceptability of wearing the SSC device. The first prototype was not able to collect any analyzable skin conductance data owing to various malfunction issues, including poor conductance and battery failure. However, 16 women wore the device for 5 weeks and reported that wearing the device was acceptable, although 31% stated that it interfered with daily activities.",
+        "However, 16 women wore the device for 5 weeks and reported that wearing the device was acceptable, although 31% stated that it interfered with daily activities. Hot flash data from the second prototype revealed a 24% concordance rate between self-reported and device-recorded hot flashes."
+      ],
+      "generated_answer": "The accuracy of the sternal skin conductance device in measuring hot flashes is somewhat limited, as indicated by a 24% concordance rate between self-reported and device-recorded hot flashes. This suggests that while the device may be able to detect some hot flashes, it may not be a reliable surrogate for measuring the full extent of hot flashes experienced by women.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.2857142857142857,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.10526315789473684,
+        "med_entity_precision": 0.18181818181818182,
+        "med_entity_recall": 0.10526315789473684,
+        "med_entity_f1": 0.13333333333333333,
+        "decision_match": 1.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 24.577359384857118,
+      "error": null
+    },
+    {
+      "sample_id": "medical_6",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Is prophylactic fixation a cost-effective method to prevent a future contralateral fragility hip fracture?",
+      "ground_truth": ": Prophylactic fixation with a cephalomedullary nail was not found to be cost-effective for the average older woman who sustained a hip fracture. However, it may be appropriate for select patient populations. The study supports the need for basic science and clinical trials investigating the effectiveness of prophylactic fixation for patient populations at higher lifetime risk for contralateral hip fracture.",
+      "retrieved_chunks": [
+        "Sensitivity analyses evaluated the impact of patient age, annual mortality and complication rates, intervention effectiveness, utilities, and costs on the value of prophylactic fixation. : In the baseline analysis, in a 79-year-old woman, prophylactic fixation was not found to be cost-effective (incremental cost-effectiveness ratio = $142,795/QALY). However, prophylactic fixation was found to be a cost-effective method to prevent contralateral hip fracture in: 1) women 71 to 75 years old who had 30% greater relative risk for a contralateral fracture; and 2) women younger than age 70 years. Cost-effectiveness was greater when the additional costs of prophylaxis were less than $6000.",
+        ": A previous hip fracture more than doubles the risk of a contralateral hip fracture. Pharmacologic and environmental interventions to prevent hip fracture have documented poor compliance. The purpose of this study was to examine the cost-effectiveness of prophylactic fixation of the uninjured hip to prevent contralateral hip fracture. : A Markov state-transition model was used to evaluate the cost and quality-adjusted life-years (QALYs) for unilateral fixation of hip fracture alone (including internal fixation or arthroplasty) compared with unilateral fixation and contralateral prophylactic hip fixation performed at the time of hip fracture or unilateral fixation and bilateral hip pad protection. Prophylactic fixation involved placement of a cephalomedullary nail in the uninjured hip and was initially assumed to have a relative risk of a contralateral fracture of 1%.",
+        "Prophylactic fixation involved placement of a cephalomedullary nail in the uninjured hip and was initially assumed to have a relative risk of a contralateral fracture of 1%. Health states included good health, surgery-related complications requiring a second operation (infection, osteonecrosis, nonunion, and malunion), fracture of the uninjured hip, and death. The primary outcome measure was the incremental cost-effectiveness ratio estimated as cost per QALY gained in 2006 US dollars with incremental cost-effectiveness ratios below $50,000 per QALY gained considered cost-effective. Sensitivity analyses evaluated the impact of patient age, annual mortality and complication rates, intervention effectiveness, utilities, and costs on the value of prophylactic fixation.",
+        "Cost-effectiveness was greater when the additional costs of prophylaxis were less than $6000. However, for most analyses, the success of prophylactic fixation was highly sensitive to the effectiveness and the relative morbidity and mortality of the additional procedure."
+      ],
+      "generated_answer": "Prophylactic fixation can be a cost-effective method to prevent a future contralateral fragility hip fracture in certain age groups and under specific conditions. For instance, it may be beneficial for women who have a higher risk of contralateral fracture, such as those with a previous hip fracture or those with a higher relative risk of fracture. Additionally, the cost-effectiveness of prophylactic fixation is influenced by the additional costs of the procedure, which should be less than $6000 for it to be considered cost-effective.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_precision_at_3": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.5833333333333334,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.5,
+        "med_entity_precision": 0.2222222222222222,
+        "med_entity_recall": 0.25,
+        "med_entity_f1": 0.23529411764705882,
+        "decision_match": 0.0,
+        "predicted_decision": "unknown"
+      },
+      "latency_s": 31.548694418743253,
+      "error": null
+    },
+    {
+      "sample_id": "medical_7",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Does Residency Selection Criteria Predict Performance in Orthopaedic Surgery Residency?",
+      "ground_truth": "We found that USMLE Step 2, number of honors in medical school clerkships, and AOA membership demonstrated the strongest correlations with resident performance. Our goal in analyzing these data was to provide residency programs at large a sense of which criteria may be \"high yield\" in ranking applicants by analyzing data from within our own pool of residents. Similar studies across a broader scope of programs are warranted to confirm applicability of our findings. The continually emerging complexities of the field of orthopaedic surgery lend increasing importance to future work on the appropriate selection and training of orthopaedic residents.",
+      "retrieved_chunks": [
+        "More than 1000 candidates applied for orthopaedic residency positions in 2014, and the competition is intense; approximately one-third of the candidates failed to secure a position in the match. However, the criteria used in the selection process often are subjective and studies have differed in terms of which criteria predict either objective measures or subjective ratings of resident performance by faculty.QUESTIONS/ Do preresidency selection factors serve as predictors of success in residency? Specifically, we asked which preresidency selection factors are associated or correlated with (1) objective measures of resident knowledge and performance; and (2) subjective ratings by faculty. Charts of 60 orthopaedic residents from our institution were reviewed.",
+        "Charts of 60 orthopaedic residents from our institution were reviewed. Preresidency selection criteria examined included United States Medical Licensing Examination (USMLE) Step 1 and Step 2 scores, Medical College Admission Test (MCAT) scores, number of clinical clerkship honors, number of letters of recommendation, number of away rotations, Alpha Omega Alpha (AOA) honor medical society membership, fourth-year subinternship at our institution, and number of publications. Resident performance was assessed using objective measures including American Board of Orthopaedic Surgery (ABOS) Part I scores and Orthopaedics In-Training Exam (OITE) scores and subjective ratings by faculty including global evaluation scores and faculty rankings of residents. We tested associations between preresidency criteria and the subsequent objective and subjective metrics using linear correlation analysis and Mann-Whitney tests when appropriate.",
+        "We tested associations between preresidency criteria and the subsequent objective and subjective metrics using linear correlation analysis and Mann-Whitney tests when appropriate. Objective measures of resident performance namely, ABOS Part I scores, had a moderate linear correlation with the USMLE Step 2 scores (r = 0.55, p<0.001) and number of clinical honors received in medical school (r = 0.45, p<0.001). OITE scores had a weak linear correlation with the number of clinical honors (r = 0.35, p = 0.009) and USMLE Step 2 scores (r = 0.29, p = 0.02). With regards to subjective outcomes, AOA membership was associated with higher scores on the global evaluation (p = 0.005).",
+        "With regards to subjective outcomes, AOA membership was associated with higher scores on the global evaluation (p = 0.005). AOA membership also correlated with higher global evaluation scores (r = 0.60, p = 0.005) with the strongest correlation existing between AOA membership and the \"interpersonal and communication skills\" subsection of the global evaluations."
+      ],
+      "generated_answer": "Research has shown that certain pre-residency selection factors can be associated with resident performance in orthopaedic surgery residency. Specifically, a moderate linear correlation was found between USMLE Step 2 scores and ABOS Part I scores, indicating that higher USMLE Step 2 scores may be linked to better performance on the ABOS Part I exam. Additionally, the number of clinical honors received in medical school was also found to have a moderate linear correlation with ABOS Part I scores, suggesting that students who excel in clinical settings may perform well in residency.\n\nFurthermore, AOA membership was found to be associated with higher scores on the global evaluation, indicating that membership in this honor society may be a predictor of success in residency. The strongest correlation was found between AOA membership and the \"interpersonal and communication skills\" subsection of the global evaluations, suggesting that residents who possess strong interpersonal and communication skills may be more likely to succeed in residency.\n\nOverall, these findings suggest that certain pre-residency selection factors can be used to predict performance in orthopaedic surgery residency, and that residency programs may benefit from considering these factors when selecting candidates.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_precision_at_3": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.8181818181818182,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.36,
+        "med_entity_precision": 0.2571428571428571,
+        "med_entity_recall": 0.36,
+        "med_entity_f1": 0.3,
+        "decision_match": 0.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 29.318624150007963,
+      "error": null
+    },
+    {
+      "sample_id": "medical_8",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Antral follicle assessment as a tool for predicting outcome in IVF--is it a better predictor than age and FSH?",
+      "ground_truth": "In vitro fertilization outcome is strongly correlated with both maternal ages, basal cycle, day 3 follicle, stimulated hormone, and antral follicle assessment. Antral follicle assessment was a better predictor of in vitro fertilization outcome than were age or follicle stimulated hormone. Antral follicle assessment may provide a marker for ovarian age that is distinct from chronological age or hormonal markers.",
+      "retrieved_chunks": [
+        "The purpose of this study is to determine if baseline antral follicle assessment may serve as additional information in predicting in vitro fertilization outcome. Prospective, descriptive preliminary study of in vitro fertilization outcome. From July 1998 to July 1999, 224 patients underwent antral follicle assessment (follicle 2-6 mm in diameter) on baseline of the planned, stimulated in vitro fertilization cycle. The outcomes were analyzed with respect to antral follicle assessment (<or = 6 or>6), basal cycle day 3 follicle stimulated hormone (<or = 10 or>10 IU/L) and maternal age (<or = 35 or>35 years).",
+        "The clinical pregnancy rate was significantly higher in the group with baseline antral follicle>6 compared to that in the group with antral follicle<or = 6 (51% vs. 19%, respectively). Controlling for patient age, and basal follicle stimulated hormone, the pregnancy rate was significantly higher in the group with antral follicle>6 compared to that in the group with antral follicle<or = 6. The cancellation rate was significantly increased with advancing maternal age, elevated basal follicle stimulated hormone levels, and baseline antral follicle<or = 6. The cancellation rate was significantly higher in the group with antral follicle<or = 6 compared to that in the group with antral follicle>or = 6 (33% vs. 1%, respectively)."
+      ],
+      "generated_answer": "The results suggest that antral follicle assessment can be a valuable tool in predicting the outcome of IVF. In this study, the group with baseline antral follicle>6 had a significantly higher clinical pregnancy rate compared to the group with antral follicle<or = 6, even after controlling for patient age and basal follicle stimulated hormone. This indicates that antral follicle assessment may be a better predictor of IVF outcome than age and FSH alone.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.875,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.3157894736842105,
+        "med_entity_precision": 0.2777777777777778,
+        "med_entity_recall": 0.2631578947368421,
+        "med_entity_f1": 0.27027027027027023,
+        "decision_match": 0.0,
+        "predicted_decision": "unknown"
+      },
+      "latency_s": 26.704498760867864,
+      "error": null
+    },
+    {
+      "sample_id": "medical_9",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Does feeding tube insertion and its timing improve survival?",
+      "ground_truth": "Neither insertion of PEG tubes nor timing of insertion affect survival.",
+      "retrieved_chunks": [
+        "To examine survival with and without a percutaneous endoscopic gastrostomy (PEG) feeding tube using rigorous methods to account for selection bias and to examine whether the timing of feeding tube insertion affected survival. Prospective cohort study. All U.S. nursing homes (NHs). Thirty-six thousand four hundred ninety-two NH residents with advanced cognitive impairment from dementia and new problems eating studied between 1999 and 2007. Survival after development of the need for eating assistance and feeding tube insertion. Of the 36,492 NH residents (88.4% white, mean age 84.9, 87.4% with one feeding tube risk factor), 1,957 (5.4%) had a feeding tube inserted within 1\u00a0year of developing eating problems.",
+        "After multivariate analysis correcting for selection bias with propensity score weights, no difference was found in survival between the two groups (adjusted hazard ratio (AHR)\u00a0=\u00a01.03, 95% confidence interval (CI)\u00a0=\u00a00.94-1.13). In residents who were tube-fed, the timing of PEG tube insertion relative to the onset of eating problems was not associated with survival after feeding tube insertion (AHR\u00a0=\u00a01.01, 95% CI\u00a0=\u00a00.86-1.20, persons with a PEG tube inserted within 1\u00a0month of developing an eating problem versus later (4\u00a0months) insertion)."
+      ],
+      "generated_answer": "No significant improvement in survival was found after feeding tube insertion.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.375,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.6,
+        "med_entity_precision": 0.4,
+        "med_entity_recall": 0.4,
+        "med_entity_f1": 0.4000000000000001,
+        "decision_match": 1.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 24.35329801402986,
+      "error": null
+    },
+    {
+      "sample_id": "medical_10",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Does early discharge with nurse home visits affect adequacy of newborn metabolic screening?",
+      "ground_truth": "In this well established early discharge program with nurse home visits, newborn metabolic screening is not compromised by early discharge.",
+      "retrieved_chunks": [
+        "To examine the impact of early discharge on newborn metabolic screening. Metabolic screening results were obtained from the Alabama State Lab for all infants born at our hospital between 8/1/97, and 1/31/99, and were matched with an existing database of early discharge infants. An early newborn discharge was defined as a discharge between 24 and 47 hours of age. Metabolic screening tests included phenylketonuria (PKU), hypothyroidism, and congenital adrenal hyperplasia (CAH). Early discharge and traditional stay infants were compared to determine the percentage of newborns screened and the timing of the first adequate specimen. The state laboratory received specimens from 3860 infants; 1324 were on early discharge newborns and 2536 infants in the traditional stay group.",
+        "The early discharge group was more likely to have an adequate specimen within the first 9 days of life (1001, 98.8% early discharge vs 2016, 96.7% traditional stay, P=.0005).",
+        "The state laboratory received specimens from 3860 infants; 1324 were on early discharge newborns and 2536 infants in the traditional stay group. At least one filter paper test (PKU, hypothyroidism, and CAH) was collected on 99.2% of early discharge infants and 96.0% of traditional stay infants (P<.0001). Early discharge infants had a higher rate of initial filter paper specimens being inadequate (22.9%) compared with traditional stay infants (14.3%, P<.0001) but had a higher rate of repeat specimens when the initial specimen was inadequate (85.0% early discharge vs 75.3% traditional stay, P=.002)."
+      ],
+      "generated_answer": "The information provided does not directly address the impact of nurse home visits on the adequacy of newborn metabolic screening for early discharge infants. However, it does suggest that early discharge infants had a higher rate of initial filter paper specimens being inadequate compared to traditional stay infants. This could imply that the lack of direct supervision or support during the early discharge period may contribute to the inadequacy of specimens.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_precision_at_3": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.5555555555555556,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.75,
+        "med_entity_precision": 0.15789473684210525,
+        "med_entity_recall": 0.75,
+        "med_entity_f1": 0.2608695652173913,
+        "decision_match": 1.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 23.455446833744645,
+      "error": null
+    },
+    {
+      "sample_id": "medical_11",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Does high-dose radiotherapy benefit palliative lung cancer patients?",
+      "ground_truth": "The palliative treatment concept of 25\u00a0Gy applied in 5\u00a0fractions is sufficient for radiation of lung cancer, given that there was no obvious survival improvement in patients treated with the higher total dose regimen.",
+      "retrieved_chunks": [
+        "The present analysis compares two palliative treatment concepts for lung cancer in terms of overall survival. Survival data from 207\u00a0patients were used in a retrospective analysis. All patients received palliative treatment comprising either 25\u00a0Gy applied in 5\u00a0fractions or 50\u00a0Gy in 20\u00a0fractions. A subgroup analysis was performed to compare patients with a good-fair vs. poor overall condition. Median survival times were 21\u00a0weeks (range\u00a06-26\u00a0weeks) for patients treated with 25\u00a0Gy in 5\u00a0fractions and 23\u00a0weeks (range\u00a014.5-31.5\u00a0weeks) for patients treated with 50\u00a0Gy in 20\u00a0fractions (95\u2009% confidence interval, CI; p\u2009=\u20090.334).",
+        "For patients with a good-fair overall condition, median survival times were 30\u00a0weeks (21.8-39.2\u00a0weeks) for 25\u00a0Gy in 5\u00a0fractions and 28\u00a0weeks (14.2-41.8\u00a0weeks) for 50\u00a0Gy in 20\u00a0fractions (CI 95\u2009%, p\u2009=\u20090.694). In patients with a poor overall condition, these values were 18\u00a0weeks (14.5-21.5\u00a0weeks) and 21\u00a0weeks (13.0-29.0\u00a0weeks), respectively (CI 95\u2009%, p\u2009=\u20090.248)."
+      ],
+      "generated_answer": "The comparison of two different radiotherapy doses suggests that there is no significant difference in overall survival between patients receiving 25 Gy in 5 fractions and those receiving 50 Gy in 20 fractions.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.42857142857142855,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.5454545454545454,
+        "med_entity_precision": 0.2857142857142857,
+        "med_entity_recall": 0.18181818181818182,
+        "med_entity_f1": 0.2222222222222222,
+        "decision_match": 1.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 22.40083175804466,
+      "error": null
+    },
+    {
+      "sample_id": "medical_12",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Is there a role for leukocyte and CRP measurements in the diagnosis of acute appendicitis in the elderly?",
+      "ground_truth": "Although elevated leukocyte count and CRP value cannot effectively establish the diagnosis of acute appendicitis in the elderly, unelevated values exclude it. Accordingly, appendectomy is not recommended to be performed in an elderly patient with unelevated leukocyte count and CRP value, although clinical symptoms and signs indicate acute appendicitis.",
+      "retrieved_chunks": [
+        "The diagnosis of acute appendicitis is still difficult and the results are unsatisfactory in three particular patient groups: in children, in fertile-age women and in elderly patients. As our population ages, the challenge for expedient diagnosis and intervention in older age groups will become more and more significant. The present study aimed at clarifying the role of leukocyte count and C-reactive protein (CRP) measurements in the diagnosis of acute appendicitis in the elderly. In particular, are there patients with acute appendicitis but unelevated leukocyte count and CRP? Eighty-three consecutive elderly patients underwent appendectomy for suspected acute appendicitis. The mean leukocyte count and CRP value were calculated in patients with an uninflamed appendix (group A) and in those with acute appendicitis (group B).",
+        "The mean leukocyte count and CRP value were calculated in patients with an uninflamed appendix (group A) and in those with acute appendicitis (group B). The percentages of patients with: (1) both values unelevated; (2) only leukocyte count elevated; (3) only CRP value elevated; (4) both values elevated were calculated within the groups A and B. There was no statistically significant difference in leukocyte counts or CRP values between patients with an uninflamed appendix (group A) and those with acute appendicitis (group B). When the patients were divided into the four subgroups, the most conspicuous finding was that group B (acute appendicitis, n = 73) contained no patients with both values unelevated."
+      ],
+      "generated_answer": "The study aimed to clarify the role of leukocyte count and C-reactive protein (CRP) measurements in the diagnosis of acute appendicitis in the elderly. However, the results showed that there was no statistically significant difference in leukocyte counts or CRP values between patients with an uninflamed appendix and those with acute appendicitis. This suggests that these measurements may not be reliable indicators for diagnosing acute appendicitis in the elderly.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.5555555555555556,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.7272727272727273,
+        "med_entity_precision": 0.25,
+        "med_entity_recall": 0.36363636363636365,
+        "med_entity_f1": 0.2962962962962963,
+        "decision_match": 0.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 25.842549737077206,
+      "error": null
+    },
+    {
+      "sample_id": "medical_13",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Does desflurane alter left ventricular function when used to control surgical stimulation during aortic surgery?",
+      "ground_truth": "This study demonstrates that in patients at risk for cardiac morbidity undergoing vascular surgery, desflurane is effective to control intraoperative hypertension without fear of major cardiac depressant effect.",
+      "retrieved_chunks": [
+        "Although desflurane is commonly used to control surgically induced hypertension, its effects on left ventricular (LV) function have not been investigated in this clinical situation. The purpose of the present study was to evaluate the LV function response to desflurane, when used to control intraoperative hypertension. In 50 patients, scheduled for vascular surgery, anesthesia was induced with sufentanil 0.5 microg/kg, midazolam 0.3 mg/kg and atracurium 0.5 mg/kg. After tracheal intubation, anesthesia was maintained with increments of drugs with controlled ventilation (N2O/O2=60/40%) until the start of surgery. A 5 Mhz transesophageal echocardiography (TEE) probe was inserted after intubation.",
+        "Sixteen patients developed hypertension at surgical incision. SAP was controlled by desflurane in all 16 patients. Afterload assessed by systemic vascular resistance index (SVRI), end-systolic wall-stress (ESWS) and left-ventricular stroke work index (LVSWI) increased with incision until the hypertension returned to post-induction values with mean end-tidal concentration of 5.1+/-0.7% desflurane. No change in heart rate, cardiac index, mean pulmonary arterial pressure, stroke volume, end-diastolic and end-systolic cross-sectional areas, fractional area change and left ventricular circumferential fiber shortening was noted when desflurane was added to restore blood pressure.",
+        "A 5 Mhz transesophageal echocardiography (TEE) probe was inserted after intubation. Pulmonary artery catheter and TEE measurements were obtained after induction (to)(control value), at surgical incision (t1) if it was associated with an increase in systolic arterial pressure (SAP) greater than 140 mmHg (hypertension) and after control of hemodynamic parameters by administration of desflurane (return of systolic arterial pressure to within 20% of the control value) (t2) in a fresh gas flow of 31/ min. Sixteen patients developed hypertension at surgical incision. SAP was controlled by desflurane in all 16 patients."
+      ],
+      "generated_answer": "No change in left ventricular function was noted when desflurane was added to restore blood pressure.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_precision_at_3": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.4,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.45454545454545453,
+        "med_entity_precision": 0.2,
+        "med_entity_recall": 0.09090909090909091,
+        "med_entity_f1": 0.12500000000000003,
+        "decision_match": 1.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 27.47491207672283,
+      "error": null
+    },
+    {
+      "sample_id": "medical_14",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Gluten tolerance in adult patients with celiac disease 20 years after diagnosis?",
+      "ground_truth": "Development of tolerance to gluten seems possible in some patients with CD. Further follow-up will show whether this tolerance is permanent or only a long-term return to latency. This feature may be associated with genetic characteristics, especially with HLA genotypes that differ from DQ2 or DQ8. More insight into the mechanisms of the development of gluten tolerance may help to distinguish those CD patients that might not require life-long GFD.",
+      "retrieved_chunks": [
+        "Celiac disease (CD) is believed to be a permanent intolerance to gluten. A number of patients, however, discontinue the gluten-free diet (GFD) without developing symptoms or signs. The aim of our study was to investigate whether CD patients are capable of developing tolerance to gluten. All 77 adult patients from our hospital known to have biopsy-proven CD for more than 10 years were invited to participate. We investigated symptoms, gluten consumption, antibodies for CD and other autoimmunity, human leukocyte antigen (HLA)-typing, bone mineral density, and performed small bowel biopsies. Tolerance was defined as no immunological or histological signs of CD while consuming gluten. Sixty-six patients accepted participation, but after review of the diagnostic biopsies 53 were found to have true CD.",
+        "Sixty-six patients accepted participation, but after review of the diagnostic biopsies 53 were found to have true CD. Twenty-three percent of patients had a gluten-containing diet, 15% admitted gluten transgression and 62% followed the GFD. Patients on a GFD had significantly more osteoporosis. Normal small bowel mucosa was found in four of eight on gluten-containing diet and in four of four with gluten transgression. Two patients were considered to have developed tolerance to gluten. One of them was HLA-DQ2/DQ8 negative."
+      ],
+      "generated_answer": "After 20 years of diagnosis, only a small percentage of adult patients with celiac disease were found to have developed tolerance to gluten. This tolerance was defined as no immunological or histological signs of the disease while consuming gluten.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.08333333333333333,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.2631578947368421,
+        "med_entity_precision": 0.2727272727272727,
+        "med_entity_recall": 0.15789473684210525,
+        "med_entity_f1": 0.19999999999999998,
+        "decision_match": 0.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 23.25761987315491,
+      "error": null
+    },
+    {
+      "sample_id": "medical_15",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Are WHO/UNAIDS/UNICEF-recommended replacement milks for infants of HIV-infected mothers appropriate in the South African context?",
+      "ground_truth": "No home-prepared replacement milks in South Africa meet all estimated micronutrient and essential fatty acid requirements of infants aged<6 months. Commercial infant formula is the only replacement milk that meets all nutritional needs. Revisions of WHO/UNAIDS/UNICEF HIV and infant feeding course replacement milk options are needed. If replacement milks are to provide total nutrition, preparations should include vegetable oils, such as soybean oil, as a source of linoleic and alpha-linolenic acids, and additional vitamins and minerals.",
+      "retrieved_chunks": [
+        "Little is known about the nutritional adequacy and feasibility of breastmilk replacement options recommended by WHO/UNAIDS/UNICEF. The study aim was to explore suitability of the 2001 feeding recommendations for infants of HIV-infected mothers for a rural region in KwaZulu Natal, South Africa specifically with respect to adequacy of micronutrients and essential fatty acids, cost, and preparation times of replacement milks. Nutritional adequacy, cost, and preparation time of home-prepared replacement milks containing powdered full cream milk (PM) and fresh full cream milk (FM) and different micronutrient supplements (2 g UNICEF micronutrient sachet, government supplement routinely available in district public health clinics, and best available liquid paediatric supplement found in local pharmacies) were compared.",
+        "PM and FM made with UNICEF micronutrient sachets provided 30% adequate intake for niacin. FM prepared with any micronutrient supplement provided no more than 32% vitamin D. All PMs provided more than adequate amounts of vitamin D. Compared with the commercial formula, PM and FM provided 8-60% of vitamins A, E, and C, folic acid, manganese, zinc, and iodine. Preparations of PM and FM provided 11% minimum recommended linoleic acid and 67% minimum recommended alpha-linolenic acid per 450 ml mixture. It took 21-25 minutes to optimally prepare 120 ml of replacement feed from PM or commercial infant formula and 30-35 minutes for the fresh milk preparation.",
+        "Costs of locally available ingredients for replacement milk were used to calculate monthly costs for infants aged one, three, and six months. Total monthly costs of ingredients of commercial and home-prepared replacement milks were compared with each other and the average monthly income of domestic or shop workers. Time needed to prepare one feed of replacement milk was simulated. When mixed with water, sugar, and each micronutrient supplement, PM and FM provided<50% of estimated required amounts for vitamins E and C, folic acid, iodine, and selenium and<75% for zinc and pantothenic acid. PM and FM made with UNICEF micronutrient sachets provided 30% adequate intake for niacin.",
+        "It took 21-25 minutes to optimally prepare 120 ml of replacement feed from PM or commercial infant formula and 30-35 minutes for the fresh milk preparation. PM or FM cost approximately 20% of monthly income averaged over the first six months of life; commercial formula cost approximately 32%."
+      ],
+      "generated_answer": "The nutritional adequacy of WHO/UNAIDS/UNICEF-recommended replacement milks for infants of HIV-infected mothers in the South African context is a concern. These milks often fall short in providing essential micronutrients and fatty acids, with some preparations providing less than 30% of the recommended intake for certain vitamins and minerals. \n\nAdditionally, the preparation time for these milks can be lengthy, taking up to 30-35 minutes for fresh milk preparation, which may be a challenge for caregivers in a rural region. Furthermore, the cost of these milks is relatively low, but it is still a significant portion of the average monthly income of domestic or shop workers.\n\nOverall, while the intention behind these recommendations is good, their practicality and nutritional adequacy in the South African context may be limited.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_precision_at_3": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.5,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.32,
+        "med_entity_precision": 0.14285714285714285,
+        "med_entity_recall": 0.2,
+        "med_entity_f1": 0.16666666666666666,
+        "decision_match": 0.0,
+        "predicted_decision": "maybe"
+      },
+      "latency_s": 30.319273496977985,
+      "error": null
+    },
+    {
+      "sample_id": "medical_16",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Do inhaled corticosteroids affect perception of dyspnea during bronchoconstriction in asthma?",
+      "ground_truth": "We have shown that eosinophilic inflammation of the airway wall may increase PD and that the association of eosinophil counts with ICSs may result in lessening the PD.",
+      "retrieved_chunks": [
+        "Some of the disagreements on the perception of dyspnea (PD) during bronchoconstriction in asthma patients could depend on the interrelationships among the following: (1) the influence of baseline airflow obstruction on the patient's ability to detect any further increase in airway resistance; (2) the effect of eosinophilic inflammation on the airway; (3) bronchial hyperresponsiveness (BHR); and (4) the effect of inhaled corticosteroids (ICSs). We hypothesized that if the inflammation of the airway wall influences to some extent and in some way the PD in asthma patients, ICSs reverse the effect of airway inflammation on the PD.",
+        "We studied 100 asthma patients who were divided into the following four groups: patients with obstruction who were either ICS-naive (group I) or were treated with ICSs (group II); and nonobstructed patients who were either ICS-naive (group III) or were treated with ICSs (group IV). PD on the visual analog scale (VAS) was assessed during a methacholine-induced FEV(1) decrease and specifically was quantified as the VAS slope and score at an FEV(1) decrease of 5 to 20%. BHR was assessed in terms of the provocative concentration of methacholine causing a 20% fall in FEV(1) (PC(20)). Eosinophil counts in induced sputum samples also were performed. Regression analysis, univariate analysis of variance, and factor analysis were applied for statistical evaluation.",
+        "Eosinophil counts in induced sputum samples also were performed. Regression analysis, univariate analysis of variance, and factor analysis were applied for statistical evaluation. For a 5 to 20% fall in FEV(1) from the lowest point after saline solution induction, VAS score was lowest in group II, slightly higher in group I, slightly higher still in group IV, and the highest in group III. In the patients as a whole, BHR related to PD, but age, clinical score, duration of the disease, and presence of baseline airway obstruction did not. In patients with obstruction who were treated with ICSs, eosinophil counts related to PD negatively.",
+        "In patients with obstruction who were treated with ICSs, eosinophil counts related to PD negatively. Factor analysis yielded the following four factors that accounted for 70% of the variance in the data: ICS; eosinophil counts; FEV(1); and PC(20) loaded on separated factors with PD loading on the same factors as PC(20). The post hoc analysis carried out dividing the patients into ICS-treated and ICS-naive, showed that in the former group eosinophil counts and BHR proved to be factors negatively associated with PD, while in the latter group eosinophil counts were positively associated with PD."
+      ],
+      "generated_answer": "Inhaled corticosteroids appear to have a significant impact on the perception of dyspnea during bronchoconstriction in asthma patients. Patients treated with inhaled corticosteroids showed a lower perception of dyspnea compared to those who were not treated with these medications.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_precision_at_3": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.6666666666666666,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.75,
+        "med_entity_precision": 0.0,
+        "med_entity_recall": 0.0,
+        "med_entity_f1": 0.0,
+        "decision_match": 0.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 29.122937622014433,
+      "error": null
+    },
+    {
+      "sample_id": "medical_17",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Are acceptance rates of a national preventive home visit programme for older people socially imbalanced?",
+      "ground_truth": "High socioeconomic status was associated with a higher acceptance rate of preventive home visits, but the association was attenuated by invitational procedures. The results indicate that the social inequality in acceptance of publicly offered preventive services might decrease if municipalities adopt more proactive invitational procedures.",
+      "retrieved_chunks": [
+        "Socioeconomic status was measured by financial assets obtained from national registry data, and invitational procedures were identified through the municipalities. Logistic regression analyses were used, adjusted by gender. Older persons with high financial assets accepted preventive home visits more frequently than persons with low assets (adjusted OR = 1.5 (CI95%: 1.1-2.0)). However, the association was attenuated when adjusted by the invitational procedures. The odds ratio for accepting preventive home visits was larger among persons with low financial assets invited by a letter with a proposed date than among persons with high financial assets invited by other procedures, though these estimates had wide confidence intervals.",
+        "Preventive home visits are offered to community dwelling older people in Denmark aimed at maintaining their functional ability for as long as possible, but only two thirds of older people accept the offer from the municipalities. The purpose of this study is to investigate 1) whether socioeconomic status was associated with acceptance of preventive home visits among older people and 2) whether municipality invitational procedures for the preventive home visits modified the association. The study population included 1,023 community dwelling 80-year-old individuals from the Danish intervention study on preventive home visits. Information on preventive home visit acceptance rates was obtained from questionnaires. Socioeconomic status was measured by financial assets obtained from national registry data, and invitational procedures were identified through the municipalities. Logistic regression analyses were used, adjusted by gender."
+      ],
+      "generated_answer": "The acceptance rates of the preventive home visit programme for older people seem to be influenced by socioeconomic status, with those having higher financial assets being more likely to accept the visits. However, the association between socioeconomic status and acceptance rates is not straightforward, as it is modified by the invitational procedures used by the municipalities.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.3333333333333333,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.5,
+        "med_entity_precision": 0.45454545454545453,
+        "med_entity_recall": 0.3125,
+        "med_entity_f1": 0.3703703703703703,
+        "decision_match": 0.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 23.826846051961184,
+      "error": null
+    },
+    {
+      "sample_id": "medical_18",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Is there a correlation between androgens and sexual desire in women?",
+      "ground_truth": "In the present study, FT and androstenedione were statistically significantly correlated with sexual desire in the total cohort of women. ADT-G did not correlate more strongly than circulating androgens with sexual desire and is therefore not superior to measuring circulating androgens by mass spectrometry.",
+      "retrieved_chunks": [
+        "For women, the correlation between circulating androgens and sexual desire is inconclusive. Substitution with androgens at physiological levels improves sexual function in women who experience decreased sexual desire and androgen deficiency from surgical menopause, pituitary disease, and age-related decline in androgen production in the ovaries. Measuring bioactive testosterone is difficult and new methods have been proposed, including measuring the primary androgen metabolite androsterone glucuronide (ADT-G).AIM: The aim of this study was to investigate a possible correlation between serum levels of androgens and sexual desire in women and whether the level of ADT-G is better correlated than the level of circulating androgens with sexual desire. This was a cross-sectional study including 560 healthy women aged 19-65 years divided into three age groups.",
+        "In women aged 45-65 years, androstenedione correlated with sexual desire. No correlations between ADT-G and sexual desire were identified.",
+        "This was a cross-sectional study including 560 healthy women aged 19-65 years divided into three age groups. Correlations were considered to be statistically significant at P<0.05. Sexual desire was determined as the total score of the sexual desire domain of the Female Sexual Function Index. Total testosterone (TT), calculated free testosterone (FT), androstenedione, dehydroepiandrosterone sulfate (DHEAS), and ADT-G were analyzed using mass spectrometry. Sexual desire correlated overall with FT and androstenedione in the total cohort of women. In a subgroup of women aged 25-44 years with no use of systemic hormonal contraception, sexual desire correlated with TT, FT, androstenedione, and DHEAS. In women aged 45-65 years, androstenedione correlated with sexual desire."
+      ],
+      "generated_answer": "The correlation between androgens and sexual desire in women is inconclusive. However, in certain age groups and under specific conditions, a correlation has been observed. For example, in women aged 45-65 years, androstenedione correlated with sexual desire. Additionally, in a subgroup of women aged 25-44 years with no use of systemic hormonal contraception, sexual desire correlated with total testosterone, calculated free testosterone, androstenedione, and dehydroepiandrosterone sulfate.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_precision_at_3": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.45454545454545453,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.9166666666666666,
+        "med_entity_precision": 0.3125,
+        "med_entity_recall": 0.4166666666666667,
+        "med_entity_f1": 0.35714285714285715,
+        "decision_match": 0.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 25.728622599039227,
+      "error": null
+    },
+    {
+      "sample_id": "medical_19",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Major depression and alcohol use disorder in adolescence: Does comorbidity lead to poorer outcomes of depression?",
+      "ground_truth": "The results of these analyses suggest that marginally higher rates of depression to age 35 amongst the comorbid MD/AUD group were explained by increased exposure to adverse childhood circumstances amongst members of the comorbid group. Adolescent MD/AUD comorbidity is likely to be a risk marker, rather than a causal factor in subsequent MD.",
+      "retrieved_chunks": [
+        "Comorbid major depression (MD) and alcohol use disorder (AUD), particularly in adolescents, have been shown to be associated with poorer subsequent MD outcomes. Longitudinal data were used to model associations between a four-level classification of MD/AUD during the period 15-18 years (neither; MD-only; AUD-only; comorbid MD/AUD) and MD over the period 18-35 years. These associations were then adjusted for confounding by a series of factors measured in childhood. The three disorder groups had rates of adult MD during the period 18-35 years that were significantly (p<.05) higher than that of the group with no disorder.",
+        "The three disorder groups had rates of adult MD during the period 18-35 years that were significantly (p<.05) higher than that of the group with no disorder. Furthermore, those in the comorbid MD/AUD group had significantly (p<.05) higher rates of adult MD than those in the AUD-only group, and marginally (p<.10) higher rates of adult MD than those in the MD-only group. After adjustment for confounding, the difference in rates of adult MD between the MD-only group and the MD/AUD group were no longer statistically significant. The factors that explained the associations were gender, childhood behavior problems, and exposure to physical and sexual abuse. The data were obtained by self-report, and may have been subject to biases."
+      ],
+      "generated_answer": "Research has shown that when two mental health conditions occur together, it can have a significant impact on the outcome of one or both conditions. In the case of adolescents with major depression and alcohol use disorder, the presence of both conditions can lead to a higher risk of experiencing depression in adulthood. This is because the combination of these two conditions can create a more complex and challenging situation for the individual to manage. As a result, the outcomes of depression in these individuals may be poorer compared to those who only experience one of these conditions.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.25,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.3157894736842105,
+        "med_entity_precision": 0.047619047619047616,
+        "med_entity_recall": 0.05263157894736842,
+        "med_entity_f1": 0.05,
+        "decision_match": 0.0,
+        "predicted_decision": "unknown"
+      },
+      "latency_s": 24.19238438922912,
+      "error": null
+    },
+    {
+      "sample_id": "medical_20",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Prostate bed target interfractional motion using RTOG consensus definitions and daily CT on rails : Does target motion differ between superior and inferior portions of the clinical target volume?",
+      "ground_truth": "There are no statistically apparent motion differences between SUP-CTV and INF-CTV. Current uniform planning target volume (PTV) margins are adequate to cover both portions of the CTV.",
+      "retrieved_chunks": [
+        "Using high-quality CT-on-rails imaging, the daily motion of the prostate bed clinical target volume (PB-CTV) based on consensus Radiation Therapy Oncology Group (RTOG) definitions (instead of surgical clips/fiducials) was studied. It was assessed whether PB motion in the superior portion of PB-CTV (SUP-CTV) differed from the inferior PB-CTV (INF-CTV). Eight pT2-3bN0-1M0 patients underwent postprostatectomy intensity-modulated radiotherapy, totaling 300\u00a0fractions. INF-CTV and SUP-CTV were defined as PB-CTV located inferior and superior to the superior border of the pubic symphysis, respectively.",
+        "INF-CTV and SUP-CTV were defined as PB-CTV located inferior and superior to the superior border of the pubic symphysis, respectively. Daily pretreatment CT-on-rails images were compared to the planning CT in the left-right (LR), superoinferior (SI), and anteroposterior (AP) directions. Two parameters were defined: \"total PB-CTV motion\" represented total shifts from skin tattoos to RTOG-defined anatomic areas; \"PB-CTV target motion\" (performed for both SUP-CTV and INF-CTV) represented shifts from bone to RTOG-defined anatomic areas (i.\u2009e., subtracting shifts from skin tattoos to bone).",
+        "Mean (\u00b1\u202fSD) INF-CTV target motion was 0.1\u00a0(\u00b1\u202f2.8), 0.5\u00a0(\u00b1\u202f2.2), and 0.2 (\u00b1\u202f2.5)\u00a0mm, and SUP-CTV target motion was 0.3\u00a0(\u00b1\u202f1.8), 0.5\u00a0(\u00b1\u202f2.3), and 0\u00a0(\u00b1\u202f5.0)\u00a0mm in LR, SI, and AP directions, respectively. No statistically significant differences between INF-CTV and SUP-CTV motion were present in any direction.",
+        "Mean (\u00b1 standard deviation, SD) total PB-CTV motion was -1.5\u00a0(\u00b1\u202f6.0), 1.3\u00a0(\u00b1\u202f4.5), and 3.7\u00a0(\u00b1\u202f5.7)\u00a0mm in LR, SI, and AP directions, respectively. Mean (\u00b1\u202fSD) PB-CTV target motion was 0.2\u00a0(\u00b11.4), 0.3\u00a0(\u00b12.4), and 0\u00a0(\u00b13.1)\u00a0mm in the LR, SI, and AP directions, respectively."
+      ],
+      "generated_answer": "No statistically significant differences between the superior and inferior portions of the clinical target volume were present in any direction.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_precision_at_3": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.7,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.3333333333333333,
+        "med_entity_precision": 0.0,
+        "med_entity_recall": 0.0,
+        "med_entity_f1": 0.0,
+        "decision_match": 1.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 28.342509648762643,
+      "error": null
+    },
+    {
+      "sample_id": "medical_21",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Are octogenarians at high risk for carotid endarterectomy?",
+      "ground_truth": "Combined end points for adverse events are acceptable in the octogenarian. Carotid endarterectomy remains the gold standard for treatment of extracranial carotid disease in all age groups. Age alone should not place patients in the high-risk category for carotid endarterectomy.",
+      "retrieved_chunks": [
+        "Several prospective randomized trials have proved carotid endarterectomy to be safe and effective for both symptomatic and asymptomatic patients younger than 80 years of age. Recently, carotid artery stenting (CAS) has been approved for use in selected high-risk patients. It has been proposed that being an octogenarian places patients in this high-risk category. All patients between the ages of 80 to 89 years undergoing carotid endarterectomy during a 12-year period were included in the study. Information included indications for carotid endarterectomy, associated risk factors, length of stay, and hospital course. Perioperative morbidity and mortality, including neurologic events and myocardial infarction, were recorded. A total of 103 carotid endarterectomies were performed in 95 octogenarians.",
+        "A total of 103 carotid endarterectomies were performed in 95 octogenarians. Procedures were performed on 59 men and 36 women. Indications for operation included symptomatic carotid stenosis in 44 patients (43%) and asymptomatic carotid stenosis in 59 (57%). Associated risk factors included diabetes mellitus (17%), hypertension (76%), coronary artery disease (28%), hyperlipidemia (39%), and history of smoking (42%). There were 4 perioperative neurologic complications, which included 1 transient ischemic attack (0.97%), 2 minor strokes (1.94%), and 1 major stroke (0.97%). There were no deaths."
+      ],
+      "generated_answer": "The study found that out of 103 carotid endarterectomies performed, there were 4 perioperative neurologic complications, which is a relatively low rate. Additionally, there were no deaths among the patients. This suggests that octogenarians may not be at high risk for carotid endarterectomy, as the outcomes were generally favorable.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.0,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.3333333333333333,
+        "med_entity_precision": 0.16666666666666666,
+        "med_entity_recall": 0.16666666666666666,
+        "med_entity_f1": 0.16666666666666666,
+        "decision_match": 1.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 24.05848221713677,
+      "error": null
+    },
+    {
+      "sample_id": "medical_22",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Immune suppression by lysosomotropic amines and cyclosporine on T-cell responses to minor and major histocompatibility antigens: does synergy exist?",
+      "ground_truth": "Lysosomotropic amines in combination with cyclosporine appear to be synergistic in the suppression of T-cell proliferation to MiHC and MHC. Use of chloroquine in combination with cyclosporine may result in improved control of GVHD.",
+      "retrieved_chunks": [
+        "Using murine models, we have shown that the lysosomotropic amine, chloroquine, is effective in the prevention of graft-versus-host disease (GVHD) mediated by donor T cells reactive with recipient minor histocompatibility antigens (MiHCs). Because lysosomotropic amines can suppress major histocompatibility complex (MHC) class II antigen presentation, their mechanism of action is potentially different from current immune suppressant drugs used to control GVHD such as cyclosporine. We investigated the use of cyclosporine and the lysosomotropic amines chloroquine and hydroxychloroquine in combination for additive or synergistic immunosuppression on T-cell responses in vitro to MiHC and MHC in mice.",
+        "We found that similar concentrations of chloroquine and hydroxychloroquine suppress the T-cell response to MiHC in mice (C57BL/6 anti-BALB.B) and that lysosomotropic amines in combination with cyclosporine result in synergistic suppression of a proliferative response to MiHC. Similar suppression and synergy appear to be present in an alloreactive response (C57BL/6 anti-BALB/c). Direct inhibition by chloroquine of T-cell proliferative responses induced by anti-CD3epsilon in the absence of antigen-presenting cells is present at higher concentrations than that required to suppress responses to MiHC or MHC. Chloroquine appears to induce decreased T-cell viability at high concentrations. This effect does not appear to be due to decreased T-cell production of interleukin-2 or interferon-gamma.",
+        "This effect does not appear to be due to decreased T-cell production of interleukin-2 or interferon-gamma. At lower concentrations (<25 microg/ml), chloroquine can also decrease the ability of antigen-presenting cells to stimulate an a C57BL/6 anti-BALB/c T-cell response and can inhibit MHC class II expression after activation with lipopolysaccharide."
+      ],
+      "generated_answer": "Yes, synergy exists between lysosomotropic amines and cyclosporine in suppressing T-cell responses to minor and major histocompatibility antigens.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_precision_at_3": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.7777777777777778,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.9,
+        "med_entity_precision": 0.25,
+        "med_entity_recall": 0.2,
+        "med_entity_f1": 0.22222222222222224,
+        "decision_match": 1.0,
+        "predicted_decision": "yes"
+      },
+      "latency_s": 27.709858685731888,
+      "error": null
+    },
+    {
+      "sample_id": "medical_23",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Effects of exercise training on heart rate and QT interval in healthy young individuals: are there gender differences?",
+      "ground_truth": "The results of this study suggest that the cardiovascular response to exercise training may be different in men and women. Women may benefit more from interventions aimed to increase physical activity as a tool for prevention of cardiovascular morbidity and mortality.",
+      "retrieved_chunks": [
+        "The aim of the present study was to assess the effects of exercise training on heart rate, QT interval, and on the relation between ventricular repolarization and heart rate in men and women. A 24 h Holter recording was obtained in 80 healthy subjects (40 males) who differed for the degree of physical activity. Trained individuals showed a lower heart rate and a higher heart rate variability than sedentary subjects, independent of the gender difference in basal heart rate. Mean 24 h QTc was similar in trained and non-trained men, while a significant difference was observed between trained and non-trained women. Exercise training reduced the QT/RR slope in both genders. This effect on the QT/RR relation was more marked in women; in fact, the gender difference in the ventricular repolarization duration at low heart rate observed in sedentary subjects was no longer present among trained individuals."
+      ],
+      "generated_answer": "Exercise training appears to have a distinct impact on heart rate and QT interval in men and women. While trained individuals of both genders exhibit a lower heart rate and higher heart rate variability compared to their sedentary counterparts, the effects on the QT interval differ between the sexes. In men, there is no significant difference in the mean 24-hour QTc interval between trained and non-trained individuals. In contrast, trained women show a notable difference in the QTc interval compared to their non-trained counterparts. Furthermore, the relationship between ventricular repolarization and heart rate is altered in women following exercise training, with the gender difference in ventricular repolarization duration at low heart rate observed in sedentary subjects no longer present among trained individuals.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.16666666666666666,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.35714285714285715,
+        "med_entity_precision": 0.10714285714285714,
+        "med_entity_recall": 0.21428571428571427,
+        "med_entity_f1": 0.14285714285714285,
+        "decision_match": 0.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 22.189357404131442,
+      "error": null
+    },
+    {
+      "sample_id": "medical_24",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Does base deficit predict mortality in patients with severe traumatic brain injury?",
+      "ground_truth": "Although BD is correlated with GCS at presentation and RTS, it is not a reliable prognostic marker for outcome and mortality in patients with isolated TBI.",
+      "retrieved_chunks": [
+        "Base Deficit (BD) is a marker of tissue hypoxia in polytrauma patients. It guides resuscitative measures, and predicts outcomes, complications and mortality. The aim of this study was to examine the presence of BD in patients with isolated severe traumatic brain injury (TBI), and to assess if it correlates with the outcomes in these patients. This was a retrospective observational study. All patients over the age of 16 years presenting to Aga Khan University Hospital from 2009 to 2013 with isolated TBI, were included. Data was extracted from 2009 to 2013. Glasgow Outcome Scale (GOS) of 4 and 5 at last follow up was categorized as favorable outcome. Data was analyzed using SPSS version 19 and receiver operative curve (ROC) was generated for BD as a predictor of mortality and unfavorable outcome.",
+        "Data was analyzed using SPSS version 19 and receiver operative curve (ROC) was generated for BD as a predictor of mortality and unfavorable outcome. One hundred and eight patients were analyzed. Ninety-eight (90.7%) were males. Mean age was 36.69 \u00b1 17.65. Eighty-eight (81.5%) patients had BD, while 20 (18.5%) patients had base excess. 62 (58.5%) of the patients had unfavorable outcomes. BD on admission had a statistically significant negative correlation with Glasgow Coma Scale (GCS) on presentation (r = -0.239, p = 0.025) and Revised Trauma Score (RTS) (r = -0.214, p = 0.046). However, there was no statistically significant difference in means of BD between survivors and non survivors.",
+        "However, there was no statistically significant difference in means of BD between survivors and non survivors. Area under receiver operator curve (ROC) for BD as a predictor of mortality statistically non-significant."
+      ],
+      "generated_answer": "The study found that base deficit (BD) on admission had a statistically significant negative correlation with Glasgow Coma Scale (GCS) on presentation and Revised Trauma Score (RTS), indicating a relationship between BD and the severity of the injury. However, the area under the receiver operator curve (ROC) for BD as a predictor of mortality was statistically non-significant, suggesting that BD may not be a reliable predictor of mortality in patients with severe traumatic brain injury.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_precision_at_3": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.125,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.7272727272727273,
+        "med_entity_precision": 0.2608695652173913,
+        "med_entity_recall": 0.5454545454545454,
+        "med_entity_f1": 0.3529411764705882,
+        "decision_match": 1.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 24.448791176080704,
+      "error": null
+    },
+    {
+      "sample_id": "medical_25",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Syncope during bathing in infants, a pediatric form of water-induced urticaria?",
+      "ground_truth": "\"Aquagenic maladies\" could be a pediatric form of the aquagenic urticaria.",
+      "retrieved_chunks": [
+        "Apparent life-threatening events in infants are a difficult and frequent problem in pediatric practice. The prognosis is uncertain because of risk of sudden infant death syndrome. Eight infants aged 2 to 15 months were admitted during a period of 6 years; they suffered from similar maladies in the bath: on immersion, they became pale, hypotonic, still and unreactive; recovery took a few seconds after withdrawal from the bath and stimulation. Two diagnoses were initially considered: seizure or gastroesophageal reflux but this was doubtful. The hypothesis of an equivalent of aquagenic urticaria was then considered; as for patients with this disease, each infant's family contained members suffering from dermographism, maladies or eruption after exposure to water or sun. All six infants had dermographism.",
+        "All six infants had dermographism. We found an increase in blood histamine levels after a trial bath in the two infants tested. The evolution of these \"aquagenic maladies\" was favourable after a few weeks without baths. After a 2-7 year follow-up, three out of seven infants continue to suffer from troubles associated with sun or water."
+      ],
+      "generated_answer": "Infants who experience apparent life-threatening events in the bath, characterized by pallor, hypotonia, and unresponsiveness, may have a condition related to an adverse reaction to water. This condition is associated with a family history of dermographism and increased blood histamine levels after exposure to water.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.3333333333333333,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.6666666666666666,
+        "med_entity_precision": 0.0,
+        "med_entity_recall": 0.0,
+        "med_entity_f1": 0.0,
+        "decision_match": 0.0,
+        "predicted_decision": "unknown"
+      },
+      "latency_s": 12.201913728844374,
+      "error": null
+    },
+    {
+      "sample_id": "medical_26",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Does laparoscopic cholecystectomy influence peri-sinusoidal cell activity?",
+      "ground_truth": "Laparoscopic procedures caused detectable damage to Kupffer and endothelial cells as reflected by elevation of post-operative HA serum levels. The damage to the liver hepatocytes and perisinusoidal cells has no clinical significance and the laparoscopic procedure itself is the probable cause of the Kupffer and endothelial cells damage, while other mechanisms caused damage to the hepatocytes.",
+      "retrieved_chunks": [
+        "To investigate the influence of laparoscopic procedures on perisinusoidal cell function. In 31 patients who underwent laparoscopic cholecystectomy for symptomatic cholelithiasis, the serum levels of beta-N-acetyl hexosaminidase (beta-NAH) and hyaluronic acid (HA) were measured. Six female patients, who underwent other laparoscopic procedures, not involving the hepatobiliary system, served as controls. HA serum levels increased significantly in both study and control groups, while beta-NAH serum levels remained within normal values. Post-operative AST and ALT serum levels increased significantly only in the study group. No elevation of serum ALP was noted in any of our patients, and post-operative bilirubin levels did not increase in patients with normal pre-operative levels."
+      ],
+      "generated_answer": "The study found that serum levels of beta-N-acetyl hexosaminidase (beta-NAH) remained within normal values after laparoscopic procedures, suggesting that peri-sinusoidal cell activity may not be significantly affected.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.16666666666666666,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.14285714285714285,
+        "med_entity_precision": 0.125,
+        "med_entity_recall": 0.07142857142857142,
+        "med_entity_f1": 0.09090909090909091,
+        "decision_match": 0.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 20.767764264252037,
+      "error": null
+    },
+    {
+      "sample_id": "medical_27",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Is adjustment for reporting heterogeneity necessary in sleep disorders?",
+      "ground_truth": "Sleep disorders are common in the general adult population of Japan. Correction for reporting heterogeneity using anchoring vignettes is not a necessary tool for proper management of sleep and energy related problems among Japanese adults. Older age, gender differences in communicating sleep-related problems, the presence of multiple morbidities, and regular exercise should be the focus of policies and clinical practice to improve sleep and energy management in Japan.",
+      "retrieved_chunks": [
+        "Anchoring vignettes are brief texts describing a hypothetical character who illustrates a certain fixed level of a trait under evaluation. This research uses vignettes to elucidate factors associated with sleep disorders in adult Japanese before and after adjustment for reporting heterogeneity in self-reports. This study also evaluates the need for adjusting for reporting heterogeneity in the management of sleep and energy related problems in Japan. We investigated a dataset of 1002 respondents aged 18 years and over from the Japanese World Health Survey, which collected information through face-to-face interview from 2002 to 2003. The ordered probit model and the Compound Hierarchical Ordered Probit (CHOPIT) model, which incorporated anchoring vignettes, were employed to estimate and compare associations of sleep and energy with socio-demographic and life-style factors before and after adjustment for differences in response category cut-points for each individual.",
+        "The prevalence of self-reported problems with sleep and energy was 53 %. Without correction of cut-point shifts, age, sex, and the number of comorbidities were significantly associated with a greater severity of sleep-related problems. After correction, age, the number of comorbidities, and regular exercise were significantly associated with a greater severity of sleep-related problems; sex was no longer a significant factor. Compared to the ordered probit model, the CHOPIT model provided two changes with a subtle difference in the magnitude of regression coefficients after correction for reporting heterogeneity."
+      ],
+      "generated_answer": "Adjusting for reporting heterogeneity can lead to a more accurate understanding of the factors associated with sleep disorders. This is because it helps to account for individual differences in how people perceive and report their sleep problems, which can be influenced by various socio-demographic and lifestyle factors. By taking these differences into account, researchers can gain a more nuanced understanding of the relationships between sleep disorders and other factors, and identify the most significant predictors of sleep problems.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.4444444444444444,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.4782608695652174,
+        "med_entity_precision": 0.125,
+        "med_entity_recall": 0.08695652173913043,
+        "med_entity_f1": 0.10256410256410256,
+        "decision_match": 0.0,
+        "predicted_decision": "unknown"
+      },
+      "latency_s": 25.56788045167923,
+      "error": null
+    },
+    {
+      "sample_id": "medical_28",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Does sex affect the outcome of laparoscopic cholecystectomy?",
+      "ground_truth": "Laparoscopic cholecystectomy is often challenging in men on account of more adhesions and inflammation. This leads to higher conversion rates and more postoperative complications. Optimized planning and a more experienced operating surgeon may help overcome these problems.",
+      "retrieved_chunks": [
+        "The aim of our study was to determine the effect of sex on the outcome of laparoscopic cholecystectomy in terms of operative time, conversion to open cholecystectomy, postoperative complications and mean hospital stay. In this retrospective observational study, we analyzed the medical records of 2061 patients who underwent laparoscopic cholecystectomy in the surgical department of Khyber Teaching Hospital (Peshawar, Pakistan) between March 2008 and January 2010. \u03c7(2)  test and t-test were respectively used to analyze categorical and numerical variables. P\u2009\u2264\u20090.05 was considered significant. The study included 1772 female and 289 male patients.",
+        "There were no statistically significant differences in mean hospital stay, wound infection and port-site herniation between men and women. Multivariate regression analysis showed that the male sex is an independent risk factor for conversion to open cholecystectomy (odds ratio\u2009=\u20092.65, 95% confidence interval: 1.03-6.94, P\u2009=\u20090.041) and biliary injuries (odds ratio\u2009=\u20090.95, 95% confidence interval: 0.91-0.99, P-value\u2009=\u20090.036).",
+        "P\u2009\u2264\u20090.05 was considered significant. The study included 1772 female and 289 male patients. The mean age for male patients was 44.07\u2009\u00b1\u200911.91 years compared to 41.29\u2009\u00b1\u200912.18 years for female patients (P\u2009=\u20090.706). Laparoscopic cholecystectomy was successfully completed in 1996 patients. The conversion rate was higher in men (P\u2009<\u20090.001), and the mean operating time was longer in men (P\u2009<\u20090.001). Bile duct injuries occurred more frequently in men (P\u2009<\u20090.001).",
+        "Bile duct injuries occurred more frequently in men (P\u2009<\u20090.001). Gallbladder perforation and gallstone spillage also occurred more commonly in men (P\u2009=\u20090.001); similarly severe inflammation was reported more in male patients (P\u2009=\u20090001). There were no statistically significant differences in mean hospital stay, wound infection and port-site herniation between men and women."
+      ],
+      "generated_answer": "Yes, sex appears to have an impact on the outcome of laparoscopic cholecystectomy. The data suggests that male patients tend to have a higher conversion rate to open cholecystectomy, longer operating times, and a higher incidence of certain complications such as bile duct injuries, gallbladder perforation, and severe inflammation compared to female patients.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_precision_at_3": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.5454545454545454,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.38461538461538464,
+        "med_entity_precision": 0.25,
+        "med_entity_recall": 0.38461538461538464,
+        "med_entity_f1": 0.30303030303030304,
+        "decision_match": 1.0,
+        "predicted_decision": "yes"
+      },
+      "latency_s": 26.601823713164777,
+      "error": null
+    },
+    {
+      "sample_id": "medical_29",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Is fluoroscopy essential for retrieval of lower ureteric stones?",
+      "ground_truth": "To uphold the notion for radiation exposure to be as low as reasonably achievable, ureteroscopic stone retrieval can safely be done without the use of fluoroscopy in a significant number of patients.",
+      "retrieved_chunks": [
+        "The aim of this study was to assess the efficacy of ureteroscopy for lower ureteric stones without the use of fluoroscopy. Between June 2001 and January 2005, a total of 110 patients with a mean age of 33.5 years (range 12-65) suffering from of lower ureteral calculi (below the upper margin of the sacroiliac joint) prospectively underwent ureteroscopic removal. Retrograde pyelography was avoided, and no safety guidewire was placed. Whenever required, the ureteric meatus was dilated with a ureteric balloon under direct vision. Double-J stent placement was done with the aid of ureteroscopy. A fluoroscope was kept standby. The patients had a postoperative X-ray of the kidney-ureter-bladder region to document the stone clearance.",
+        "A fluoroscope was kept standby. The patients had a postoperative X-ray of the kidney-ureter-bladder region to document the stone clearance. The mean stone size was 8.7 mm (range 6-15). Complete clearance without the use of fluoroscopy was achieved in 99 patients (94.2%). Fluoroscopy was required in 6 patients (4%) for calcified stricture (n = 1), duplex system (n = 1), narrow and tortuous meatus causing difficulty in passing the 5-Fr balloon dilator (n = 3), and confirmation of spontaneous passage of the stone (n = 1). Of the 13 patients who required balloon dilatation it was successfully achieved without fluoroscopy.",
+        "Of the 13 patients who required balloon dilatation it was successfully achieved without fluoroscopy. Double-J stenting was done due to mucosal ulceration (n = 3), polypoid reaction (n = 2), and perforation (n = 1). All these patients had correct placement of the stent, as confirmed by X-ray of the kidney-ureter-bladder region postoperatively."
+      ],
+      "generated_answer": "No, fluoroscopy is not essential for the retrieval of lower ureteric stones. In fact, in this study, complete clearance without the use of fluoroscopy was achieved in 99 patients (94.2%).",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_precision_at_3": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.3076923076923077,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.4,
+        "med_entity_precision": 0.42857142857142855,
+        "med_entity_recall": 0.6,
+        "med_entity_f1": 0.5,
+        "decision_match": 1.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 23.310647604987025,
+      "error": null
+    },
+    {
+      "sample_id": "medical_30",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Do Surrogates of Injury Severity Influence the Occurrence of Heterotopic Ossification in Fractures of the Acetabulum?",
+      "ground_truth": "Surrogates of injury severity, including days in the ICU and non-ICU hospital LOS>10 days, were associated with the development of HO in our cohort of acetabular fracture patients. Prophylaxis with XRT was significantly protective against the development of HO, and the ability to provide prophylaxis is very likely related to the severity of injury.",
+      "retrieved_chunks": [
+        "To determine the relationship between injury severity surrogates and other patient factors with the development and severity of heterotopic ossification (HO) following open reduction internal fixation of acetabular fractures treated with a posterior approach. Retrospective review. Academic level 1 trauma center. Two hundred forty-one patients who were treated through a posterior approach with a minimum of 6-month radiographic follow-up were identified from an acetabular fracture database. None. The occurrence and severity (Brooker Grade III/IV) of HO 6 months postsurgery.",
+        "0-6 days): OR = 7.6, 95% CI, 2.6-22.25; XRT HO prophylaxis: OR = 0.29, 95% CI, 0.10-0.85]. Other variables evaluated in multivariate modeling not significantly associated with development and severity of HO included age, gender, mechanism of injury, injury severity score, presence of neurologic injury, Letournel fracture type, occurrence of hip dislocation, interval from injury to surgery, operative time, and estimated blood loss.",
+        "None. The occurrence and severity (Brooker Grade III/IV) of HO 6 months postsurgery. Length of stay (LOS) in the intensive care unit (ICU), non-ICU LOS>10 days, and HO prophylaxis with external radiation beam therapy (XRT) were significantly associated with the development of HO in a multivariate model [ 1-2 days, odds ratio (OR) = 4.33, 95% confidence interval (CI): 1.03-18.25; 3-6 days, OR = 4.1, 95% CI, 1.27-13.27;>6 days, OR = 11.7, 95% CI, 3.24-42.22; non-ICU LOS>10 days (vs."
+      ],
+      "generated_answer": "Injury severity surrogates do not appear to have a significant association with the development and severity of heterotopic ossification in the specified context.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_precision_at_3": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.5,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.8,
+        "med_entity_precision": 0.5714285714285714,
+        "med_entity_recall": 0.26666666666666666,
+        "med_entity_f1": 0.36363636363636365,
+        "decision_match": 0.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 28.722205406054854,
+      "error": null
+    },
+    {
+      "sample_id": "medical_31",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Epidural analgesia for surgical treatment of peritoneal carcinomatosis: a risky technique?",
+      "ground_truth": "In this series of 35 patients, the use of epidural analgesia for HIPEC does not seem to be associated with a worse risk of haemodynamic instability, spinal haematoma, meningitis or epidural abscess. HIPEC with platinum salt is not incompatible with the safety of epidural analgesia, with an optimized fluid management peroperatively and the following of perimedullary anesthesia practice guidelines.",
+      "retrieved_chunks": [
+        "To study the risks of haemodynamic instability, and the possible occurrence of spinal haematoma, meningitis and epidural abscess when epidural analgesia is performed for cytoreductive surgery and hyperthermic intraperitoneal chemotherapy (HIPEC). We retrospectively analyzed the data of 35 patients treated by HIPEC with oxaliplatin or cisplatin. An epidural catheter was inserted before induction of general anaesthesia. Postoperatively, a continuous epidural infusion of ropivacain, then a patient-controlled epidural analgesia were started. The epidural catheter was used peroperatively before HIPEC in 12 subjects (34%), and after HIPEC in 23 subjects (66%). The median dose of ropivacain given peroperatively in the epidural catheter was 40 mg (30-75).",
+        "The median dose of ropivacain given peroperatively in the epidural catheter was 40 mg (30-75). Norepinephrin was used in two subjects (6%) peroperatively (median infusion rate 0.325 \u03bcg/kg per minute [0.32-0.33]), and in four subjects (11%) in the postoperative 24 hours. No spinal haematoma, meningitis or epidural abscess were noted. Five subjects (14%) had a thrombopenia or a prothrombin time less than 60% before catheter removal. Two subjects (6%) had a leukopenia before catheter removal. No thrombopenia or blood coagulation disorders were recorded the day of catheter removal."
+      ],
+      "generated_answer": "The data suggests that the use of epidural analgesia in a specific group of patients undergoing cytoreductive surgery and hyperthermic intraperitoneal chemotherapy did not result in any cases of spinal haematoma, meningitis, or epidural abscess. However, a small percentage of patients experienced thrombopenia or blood coagulation disorders, which may indicate a risk associated with this technique.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.18181818181818182,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.5333333333333333,
+        "med_entity_precision": 0.4666666666666667,
+        "med_entity_recall": 0.4666666666666667,
+        "med_entity_f1": 0.4666666666666667,
+        "decision_match": 1.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 27.578696289565414,
+      "error": null
+    },
+    {
+      "sample_id": "medical_32",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Telemedicine and type 1 diabetes: is technology per se sufficient to improve glycaemic control?",
+      "ground_truth": "The Diabeo system improved glycaemic control in both high and low users who avidly used the IDA function, while the greatest improvement was seen in the low users who had the motivational support of teleconsultations.",
+      "retrieved_chunks": [
+        "Each patient received a smartphone with an insulin dose advisor (IDA) and with (G3 group) or without (G2 group) the telemonitoring/teleconsultation function. Patients were classified as \"high users\" if the proportion of \"informed\" meals using the IDA exceeded 67% (median) and as \"low users\" if not. Also analyzed was the respective impact of the IDA function and teleconsultations on the final HbA1c levels. Among the high users, the proportion of informed meals remained stable from baseline to the end of the study 6months later (from 78.1\u00b121.5% to 73.8\u00b125.1%; P=0.107), but decreased in the low users (from 36.6\u00b129.4% to 26.7\u00b128.4%; P=0.005).",
+        "As expected, HbA1c improved in high users from 8.7% [range: 8.3-9.2%] to 8.2% [range: 7.8-8.7%]in patients with (n=26) vs without (n=30) the benefit of telemonitoring/teleconsultation (-0.49\u00b10.60% vs -0.52\u00b10.73%, respectively; P=0.879). However, although HbA1c also improved in low users from 9.0% [8.5-10.1] to 8.5% [7.9-9.6], those receiving support via teleconsultation tended to show greater improvement than the others (-0.93\u00b10.97 vs -0.46\u00b11.05, respectively; P=0.084)."
+      ],
+      "generated_answer": "While technology can be a valuable tool in managing type 1 diabetes, the available data suggest that it may not be enough on its own to achieve significant improvements in glycaemic control. The results indicate that patients who received additional support through teleconsultation showed greater improvements in HbA1c levels, even if they were not classified as \"high users\" of the technology. This implies that human interaction and support may play a crucial role in achieving better outcomes, and that technology alone may not be sufficient to drive meaningful improvements in glycaemic control.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.5,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.5555555555555556,
+        "med_entity_precision": 0.0625,
+        "med_entity_recall": 0.1111111111111111,
+        "med_entity_f1": 0.08,
+        "decision_match": 0.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 28.43972605606541,
+      "error": null
+    },
+    {
+      "sample_id": "medical_33",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Mammographic screening in Sami speaking municipalities and a control group. Are early outcome measures influenced by ethnicity?",
+      "ground_truth": "Despite a lower risk of breast cancer, the Sami attended the NBCSP more frequently than the control group. The recall and cancer detection rate was lower among the Sami compared with the non-Sami group.",
+      "retrieved_chunks": [
+        "Female citizens of Sami (the indigenous people of Norway) municipalities in northern Norway have a low risk of breast cancer. The objective of this study was to describe the attendance rate and outcome of the Norwegian Breast Cancer Screening Program (NBCSP) in the Sami-speaking municipalities and a control group. A retrospective registry-based study. The 8 municipalities included in the administration area of the Sami language law (Sami) were matched with a control group of 11 municipalities (non-Sami). Population data were accessed from Statistics Norway. Data regarding invitations and outcome in the NBCSP during the period 2001-2010 was derived from the Cancer Registry of Norway (CRN). The NBCSP targets women aged 50-69 years. Rates and percentages were compared using chi-square test with a p-value<0.05 as statistical significant.",
+        "The NBCSP targets women aged 50-69 years. Rates and percentages were compared using chi-square test with a p-value<0.05 as statistical significant. The attendance rate in the NBCSP was 78% in the Sami and 75% in the non-Sami population (p<0.01). The recall rates were 2.4 and 3.3% in the Sami and non-Sami population, respectively (p<0.01). The rate of invasive screen detected cancer was not significantly lower in the Sami group (p=0.14). The percentage of all breast cancers detected in the NBCSP among the Sami (67%) was lower compared with the non-Sami population (86%, p=0.06)."
+      ],
+      "generated_answer": "The attendance rate in the mammographic screening program was higher in the Sami-speaking municipalities compared to the control group, with 78% attendance in the Sami population and 75% in the non-Sami population. However, the recall rates were not significantly different between the two groups, with 2.4% in the Sami population and 3.3% in the non-Sami population. The rate of invasive screen-detected cancer was not significantly lower in the Sami group, suggesting that early outcome measures may not be strongly influenced by ethnicity in this context.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.08333333333333333,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.4,
+        "med_entity_precision": 0.058823529411764705,
+        "med_entity_recall": 0.1,
+        "med_entity_f1": 0.07407407407407408,
+        "decision_match": 0.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 24.255695707630366,
+      "error": null
+    },
+    {
+      "sample_id": "medical_34",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Is ganglionated plexi ablation during Maze IV procedure beneficial for postoperative long-term stable sinus rhythm?",
+      "ground_truth": "GP ablation did not prove to be beneficial for postoperative stable NSR. A complete left atrial lesion set and biatrial ablation are advisable for improving rhythm outcomes. Randomized controlled trials are necessary to confirm our findings.",
+      "retrieved_chunks": [
+        "We investigated the role of surgical ablation targeting the autonomous nervous system during a Cox-Maze IV procedure in the maintenance of sinus rhythm at long-term follow-up. The patient population consisted of 519 subjects with persistent or long-standing persistent atrial fibrillation (AF) undergoing radiofrequency Maze IV during open heart surgery between January 2006 and July 2013 at three institutions without (Group 1) or with (Group 2) ganglionated plexi (GP) ablation. Recurrence of atrial fibrillation off-antiarrhythmic drugs was the primary outcome. Predictors of AF recurrence were evaluated by means of competing risk regression. Median follow-up was 36.7 months.",
+        "Predictors of AF recurrence were evaluated by means of competing risk regression. Median follow-up was 36.7 months. The percentage of patients in normal sinus rhythm (NSR) off-antiarrhythmic drugs did not differ between groups (Group 1-75.5%, Group 2-67.8%, p = 0.08). Duration of AF \u2265 38 months (p = 0.01), left atrial diameter \u2265 54 mm (0.001), left atrial area \u2265 33 cm(2) (p = 0.005), absence of connecting lesions (p= 0.04), and absence of right atrial ablation (p<0.001) were independently associated with high incidence of AF recurrence. In contrast the absence of GP ablation was not a significant factor (p = 0.12)."
+      ],
+      "generated_answer": "The absence of ganglionated plexi ablation during the Maze IV procedure did not result in a significant difference in the percentage of patients in normal sinus rhythm off-antiarrhythmic drugs compared to those who underwent the procedure with ganglionated plexi ablation.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.5,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.16666666666666666,
+        "med_entity_precision": 0.0,
+        "med_entity_recall": 0.0,
+        "med_entity_f1": 0.0,
+        "decision_match": 1.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 27.656617008149624,
+      "error": null
+    },
+    {
+      "sample_id": "medical_35",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Should serum pancreatic lipase replace serum amylase as a biomarker of acute pancreatitis?",
+      "ground_truth": "It is concluded that serum pancreatic lipase is a more accurate biomarker of acute pancreatitis than serum amylase.",
+      "retrieved_chunks": [
+        "Serum pancreatic lipase may improve the diagnosis of pancreatitis compared to serum amylase. Both enzymes have been measured simultaneously at our hospital allowing for a comparison of their diagnostic accuracy. Seventeen thousand five hundred and thirty-one measurements of either serum amylase and or serum pancreatic lipase were made on 10 931 patients treated at a metropolitan teaching hospital between January 2001 and May 2003. Of these, 8937 were initially treated in the Emergency Department. These results were collected in a database, which was linked by the patients' medical record number to the radiology and medical records. Patients with either an elevated lipase value or a discharge diagnosis of acute pancreatitis had their radiological diagnosis reviewed along with their biochemistry and histology record. The diagnosis of acute pancreatitis was made if there was radiological evidence of peripancreatic inflammation.",
+        "The diagnosis of acute pancreatitis was made if there was radiological evidence of peripancreatic inflammation. One thousand eight hundred and twenty-five patients had either elevated serum amylase and or serum pancreatic lipase. The medical records coded for pancreatitis in a further 55 whose enzymes were not elevated. Three hundred and twenty of these had radiological evidence of acute pancreatitis. Receiver operator characteristic analysis of the initial sample from patients received in the Emergency Department showed improved diagnostic accuracy for serum pancreatic lipase (area under the curve (AUC) 0.948) compared with serum amylase (AUC, 0.906, P<0.05).",
+        "A clinically useful cut-off point would be at the diagnostic threshold; 208 U/L (normal<190 U/L) for serum pancreatic lipase and 114 U/L (normal 27-100 U/L) for serum amylase where the sensitivity was 90.3 cf., 76.8% and the specificity was 93 cf., 92.6%. 18.8% of the acute pancreatitis patients did not have elevated serum amylase while only 2.9% did not have elevated serum pancreatic lipase on the first emergency department measurement."
+      ],
+      "generated_answer": "Serum pancreatic lipase appears to offer improved diagnostic accuracy for acute pancreatitis compared to serum amylase, as evidenced by its higher area under the curve (AUC) in receiver operator characteristic analysis. This suggests that it may be a more reliable biomarker for diagnosing acute pancreatitis.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_precision_at_3": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.3076923076923077,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.6,
+        "med_entity_precision": 0.4444444444444444,
+        "med_entity_recall": 0.8,
+        "med_entity_f1": 0.5714285714285714,
+        "decision_match": 0.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 29.65919160610065,
+      "error": null
+    },
+    {
+      "sample_id": "medical_36",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Transgastric endoscopic splenectomy: is it possible?",
+      "ground_truth": "Transgastric endoscopic splenectomy in a porcine model appears technically feasible. Additional long-term survival experiments are planned.",
+      "retrieved_chunks": [
+        "We have previously reported the feasibility of diagnostic and therapeutic peritoneoscopy including liver biopsy, gastrojejunostomy, and tubal ligation by an oral transgastric approach. We present results of per-oral transgastric splenectomy in a porcine model. The goal of this study was to determine the technical feasibility of per-oral transgastric splenectomy using a flexible endoscope. We performed acute experiments on 50-kg pigs. All animals were fed liquids for 3 days prior to procedure. The procedures were performed under general anesthesia with endotracheal intubation. The flexible endoscope was passed per orally into the stomach and puncture of the gastric wall was performed with a needle knife.",
+        "The flexible endoscope was passed per orally into the stomach and puncture of the gastric wall was performed with a needle knife. The puncture was extended to create a 1.5-cm incision using a pull-type sphincterotome, and a double-channel endoscope was advanced into the peritoneal cavity. The peritoneal cavity was insufflated with air through the endoscope. The spleen was visualized. The splenic vessels were ligated with endoscopic loops and clips, and then mesentery was dissected using electrocautery. Endoscopic splenectomy was performed on six pigs. There were no complications during gastric incision and entrance into the peritoneal cavity. Visualization of the spleen and other intraperitoneal organs was very good.",
+        "There were no complications during gastric incision and entrance into the peritoneal cavity. Visualization of the spleen and other intraperitoneal organs was very good. Ligation of the splenic vessels and mobilization of the spleen were achieved using commercially available devices and endoscopic accessories."
+      ],
+      "generated_answer": "Yes, it is possible to perform a transgastric endoscopic splenectomy.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_precision_at_3": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.26666666666666666,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.2,
+        "med_entity_precision": 1.0,
+        "med_entity_recall": 0.2,
+        "med_entity_f1": 0.33333333333333337,
+        "decision_match": 1.0,
+        "predicted_decision": "yes"
+      },
+      "latency_s": 23.955411691218615,
+      "error": null
+    },
+    {
+      "sample_id": "medical_37",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Subclavian steal syndrome: can the blood pressure difference between arms predict the severity of steal?",
+      "ground_truth": "Brachial systolic blood pressure difference is related to the severity of SSS and can be used as a screening tool for SSS. However, it performed better in severe steal than milder steal phenomena.",
+      "retrieved_chunks": [
+        "A side-to-side difference in systolic brachial arterial blood pressure is a common finding in subclavian artery stenosis and is frequently used as a screening tool for subclavian steal syndrome (SSS). It was the goal of this retrospective study to investigate the relationship between different vertebral artery waveform types and the side-to-side difference in systolic blood pressure in patients with sonographically proven SSS. The records of 1860 patients from the Neuroultrasound Laboratory between January 2000 and December 2000 were screened for the diagnosis of SSS in the final ultrasound report. In all patients, bilateral brachial arterial blood pressure was measured in a sitting position prior to the ultrasound examination. Vertebral artery waveforms were classified as (1) systolic deceleration, (2) alternating flow, and (3) complete reversal at rest.",
+        "Vertebral artery waveforms were classified as (1) systolic deceleration, (2) alternating flow, and (3) complete reversal at rest. Blood pressure difference as calculated by normal-side blood pressure minus lesion-side blood pressure was compared with the 3 Doppler waveform types. SSS was found in 51 of 1860 (2.7%) ultrasonography studies of 49 patients (17 men, 32 women; mean age 65.3 +/- 10.5 years). Two patients (4%) had bilateral SSS. In 3 patients (6%), SSS was related to an innominate artery stenosis. Waveform analysis showed a completely reversed flow in 16 (31%), an alternating flow in 24 (47%), and a systolic deceleration in 11 (22%) cases.",
+        "Waveform analysis showed a completely reversed flow in 16 (31%), an alternating flow in 24 (47%), and a systolic deceleration in 11 (22%) cases. Systolic blood pressure difference was significantly higher in the complete reversal and alternating groups than in the systolic deceleration group (P<.001)."
+      ],
+      "generated_answer": "The study found a significant correlation between the type of vertebral artery waveform and the side-to-side difference in systolic blood pressure. However, it did not directly investigate the relationship between the blood pressure difference and the severity of subclavian steal syndrome. \n\nThe study did find that patients with completely reversed flow and alternating flow had a significantly higher systolic blood pressure difference compared to those with systolic deceleration. This suggests that the blood pressure difference may be related to the presence and type of vertebral artery waveform abnormality, but it does not provide information on the severity of the steal.\n\nTo determine if the blood pressure difference can predict the severity of steal, further research would be needed to investigate the relationship between the blood pressure difference and clinical outcomes, such as the degree of neurological impairment or the presence of symptoms.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_precision_at_3": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.36363636363636365,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.2857142857142857,
+        "med_entity_precision": 0.07692307692307693,
+        "med_entity_recall": 0.2857142857142857,
+        "med_entity_f1": 0.12121212121212123,
+        "decision_match": 0.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 530.0218149279244,
+      "error": null
+    },
+    {
+      "sample_id": "medical_38",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Can transcranial direct current stimulation be useful in differentiating unresponsive wakefulness syndrome from minimally conscious state patients?",
+      "ground_truth": "a-tDCS could be useful in identifying residual connectivity markers in clinically-defined UWS, who may lack of purposeful behavior as a result of a motor-output failure.",
+      "retrieved_chunks": [
+        "Disorders of consciousness (DOC) diagnosis relies on the presence or absence of purposeful motor responsiveness, which characterizes the minimally conscious state (MCS) and the unresponsive wakefulness syndrome (UWS), respectively. Functional neuroimaging studies have raised the question of possible residual conscious awareness also in clinically-defined UWS patients. The aim of our study was to identify electrophysiological parameters, by means of a transcranial magnetic stimulation approach, which might potentially express the presence of residual networks sustaining fragmentary behavioral patterns, even when no conscious behavior can be observed. We enrolled 25 severe DOC patients, following post-anoxic or traumatic brain injury and 20 healthy individuals (HC) as control group.",
+        "We enrolled 25 severe DOC patients, following post-anoxic or traumatic brain injury and 20 healthy individuals (HC) as control group. Baseline electrophysiological evaluation evidenced, in comparison to HC, a partial preservation of cortical effective connectivity and excitability in clinically defined MCS, whereas these components were absent in clinically defined UWS. Then, we applied an anodal transcranial direct current stimulation (a-tDCS) protocol over the orbitofrontal cortex. a-tDCS was able to boost cortical connectivity and excitability in all HC, MCS, and to unmask such excitability/connectivity in some UWS patients."
+      ],
+      "generated_answer": "Transcranial direct current stimulation may be able to reveal differences in brain function between patients with unresponsive wakefulness syndrome and those with minimally conscious state, as it was able to unmask excitability/connectivity in some patients who were previously classified as unresponsive.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.2857142857142857,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.42857142857142855,
+        "med_entity_precision": 0.0,
+        "med_entity_recall": 0.0,
+        "med_entity_f1": 0.0,
+        "decision_match": 0.0,
+        "predicted_decision": "unknown"
+      },
+      "latency_s": 26.824490282218903,
+      "error": null
+    },
+    {
+      "sample_id": "medical_39",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Do French lay people and health professionals find it acceptable to breach confidentiality to protect a patient's wife from a sexually transmitted disease?",
+      "ground_truth": "Most people in France are influenced by situational factors when deciding if a physician should breach confidentiality to protect the spouse of a patient infected with STD.",
+      "retrieved_chunks": [
+        "To determine under what conditions lay people and health professionals find it acceptable for a physician to breach confidentiality to protect the wife of a patient with a sexually transmitted disease (STD). In a study in France, breaching confidentiality in 48 scenarios were accepted by 144 lay people, 10 psychologists and 7 physicians. The scenarios were all possible combinations of five factors: severity of the disease (severe, lethal); time taken to discuss this with (little time, much time); intent to inform the spouse about the disease (none, one of these days, immediately); intent to adopt protective behaviours (no intent, intent); and decision to consult an expert in STDs (yes, no), 2 x 2 x 3 x 2 x 2. The importance and interactions of each factor were determined, at the group level, by performing analyses of variance and constructing graphs.",
+        "The importance and interactions of each factor were determined, at the group level, by performing analyses of variance and constructing graphs. The concept of breaching confidentiality to protect a wife from her husband's STD was favoured much more by lay people and psychologists than by physicians (mean ratings 11.76, 9.28 and 2.90, respectively, on a scale of 0-22). The patient's stated intentions to protect his wife and to inform her of the disease had the greatest impact on acceptability. A cluster analysis showed groups of lay participants who found breaching confidentiality \"always acceptable\" (n = 14), \"depending on the many circumstances\" (n = 87), requiring \"consultation with an expert\" (n = 30) and \"never acceptable (n = 13)\"."
+      ],
+      "generated_answer": "In certain situations, a significant number of French lay people and health professionals find it acceptable to breach confidentiality to protect a patient's wife from a sexually transmitted disease.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.42857142857142855,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.5454545454545454,
+        "med_entity_precision": 0.14285714285714285,
+        "med_entity_recall": 0.09090909090909091,
+        "med_entity_f1": 0.1111111111111111,
+        "decision_match": 0.0,
+        "predicted_decision": "unknown"
+      },
+      "latency_s": 29.318218723870814,
+      "error": null
+    },
+    {
+      "sample_id": "medical_40",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Medical student education in emergency medicine: do students meet the national standards for clinical encounters of selected core conditions?",
+      "ground_truth": "Most students do not encounter all 10 conditions during patient encounters throughout a 4-week EM rotation, although most have exposure to at least eight. Certain conditions are far less likely than others to be encountered, and may need to be taught in a nonclinical setting.",
+      "retrieved_chunks": [
+        "Establishing a core curriculum for undergraduate Emergency Medicine (EM) education is crucial to development of the specialty. The Clerkship Directors in Emergency Medicine (CDEM) National Curriculum Task Force recommended that all students in a 4(th)-year EM clerkship be exposed to 10 emergent clinical conditions. To evaluate the feasibility of encountering recommended core conditions in a clinical setting during a 4(th)-year EM clerkship. Students from three institutions participated in this ongoing, prospective observation study. Students' patient logs were collected during 4-week EM clerkships between July 2011 and June 2012. De-identified logs were reviewed and the number of patient encounters for each of the CDEM-identified emergent conditions was recorded. The percentage of students who saw each of the core complaints was calculated, as was the average number of core complaints seen by each.",
+        "The percentage of students who saw each of the core complaints was calculated, as was the average number of core complaints seen by each. Data from 130 students at three institutions were captured; 15.4% of students saw all 10 conditions during their rotation, and 76.9% saw at least eight. The average number of conditions seen per student was 8.4 (range of 7.0-8.6). The percentage of students who saw each condition varied, ranging from 100% (chest pain and abdominal pain) to 31% (cardiac arrest)."
+      ],
+      "generated_answer": "While the majority of students in a 4th-year EM clerkship were able to encounter a significant number of core conditions, there is still a notable variation in the percentage of students who saw each condition. \n\nIn fact, nearly three-quarters of students saw at least eight of the recommended core conditions, and the average number of conditions seen per student was around eight. However, there is a notable gap in exposure to certain conditions, with some students not encountering them at all.\n\nTo meet the national standards, it's essential for students to have a comprehensive exposure to these core conditions. While the data suggests that many students are meeting this requirement, there is still room for improvement, particularly in terms of ensuring that all students have the opportunity to encounter each of the recommended conditions.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.3,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.7142857142857143,
+        "med_entity_precision": 0.2222222222222222,
+        "med_entity_recall": 0.5714285714285714,
+        "med_entity_f1": 0.32,
+        "decision_match": 1.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 25.27773203002289,
+      "error": null
+    },
+    {
+      "sample_id": "medical_41",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "The clinical significance of bile duct sludge: is it different from bile duct stones?",
+      "ground_truth": "The findings indicate that the clinical significance of symptomatic BDS is similar to that of CBD stones. Bile duct sludge seems to be an early stage of choledocholithiasis.",
+      "retrieved_chunks": [
+        "Some patients with suspected common bile duct (CBD) stones are found to have sludge and no stones. Although sludge in the gallbladder is a precursor of gallbladder stones, the significance of bile duct sludge (BDS) is poorly defined. This study aimed to compare BDS with bile duct stones in terms of frequency, associated risk factors, and clinical outcome after endoscopic therapy. The study enrolled 228 patients who underwent therapeutic endoscopic retrograde cholangiopancreatography (ERCP) for suspected choledocholithiasis. The patients were divided into two groups: patients with BDS but no stones on ERCP and patients with CBD stones. The presence of risk factors for bile duct stones (age, periampullary diverticulum, ductal dilation or angulation, previous open cholecystectomy) were assessed at ERCP.",
+        "Follow-up data (36 +/- 19 months) were obtained from medical records and by patient questioning. Bile duct sludge occurred in 14% (31/228) of patients and was more common in females. After endoscopic clearance, CBD stones recurred in 17% (33/197) of the patients with CBD stones, and in 16% (5/31) of the patients with BDS (p = 0.99). Common bile duct dilation was less common in the sludge group. The other known risk factors for recurrent CBD stones (age, previous open cholecystectomy, bile duct angulation, and the presence of a peripampullary diverticulum) were not statistically different between the two groups."
+      ],
+      "generated_answer": "The clinical outcome after endoscopic therapy for patients with bile duct sludge and those with bile duct stones shows a similar rate of recurrence. This suggests that, in terms of clinical outcome, bile duct sludge may not be significantly different from bile duct stones.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.09090909090909091,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.6,
+        "med_entity_precision": 0.375,
+        "med_entity_recall": 0.3,
+        "med_entity_f1": 0.33333333333333326,
+        "decision_match": 1.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 25.362406304106116,
+      "error": null
+    },
+    {
+      "sample_id": "medical_42",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Is nasogastric decompression useful in prevention of leaks after laparoscopic sleeve gastrectomy?",
+      "ground_truth": "Routine placement of nasogastric tube in patients operated of LSG seems not useful in reducing leaks' incidence.",
+      "retrieved_chunks": [
+        "Although its excellent results, laparoscopic sleeve gastrectomy (LSG) presents major complications ranging from 0% to 29%. Among them, the staple line leak presents an incidence varying from 0% to 7%. Many trials debated about different solutions in order to reduce leaks' incidence. No author has investigated the role of gastric decompression in the prevention of this complication. Aim of our work is to evaluate if this procedure can play a role in avoiding the occurrence of staple line leaks after LSG. Between January 2008 and November 2012, 145 patients were prospectively and randomly included in the study. Seventy patients composed the group A, whose operations were completed with placement of nasogastric tube; the other 75 patients were included in the group B, in which no nasogastric tube was placed.",
+        "No statistical differences were observed between group A and group B regarding gender distribution, age, weight, and BMI. No intraoperative complications and no conversion occurred in both groups. Intraoperative blood loss (50.1 \u00b1 42.3 vs. 52.5 \u00b1 37.6 ml, respectively) and operative time (65.4 \u00b1 25.5 vs. 62.6 \u00b1 27.8 min, respectively) were comparable between the two groups (p: NS). One staple line leak (1.4%) occurred on 6th postoperative day in group A patients. No leak was observed in group B patients. Postoperative hospital stay was significantly longer in group A vs. group B patients (7.6 \u00b1 3.4 vs. 6.2 \u00b1 3.1 days, respectively, p: 0.04)."
+      ],
+      "generated_answer": "The results suggest that the group without nasogastric tube placement had a lower incidence of staple line leaks compared to the group with nasogastric tube placement. This implies that nasogastric decompression may not be effective in preventing leaks after laparoscopic sleeve gastrectomy.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.15384615384615385,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.75,
+        "med_entity_precision": 0.3,
+        "med_entity_recall": 0.375,
+        "med_entity_f1": 0.33333333333333326,
+        "decision_match": 1.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 27.057157257106155,
+      "error": null
+    },
+    {
+      "sample_id": "medical_43",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Is laparoscopic sonography a reliable and sensitive procedure for staging colorectal cancer?",
+      "ground_truth": "The results obtained in this study demonstrate that LUS is an accurate and highly sensitive procedure in staging colorectal cancer, providing a useful and reliable diagnostic tool complementary to laparoscopy.",
+      "retrieved_chunks": [
+        "Laparoscopic colectomy has developed rapidly with the explosion of technology. In most cases, laparoscopic resection is performed for colorectal cancer. Intraoperative staging during laparoscopic procedure is limited. Laparoscopic ultrasonography (LUS) represents the only real alternative to manual palpation during laparoscopic surgery. We evaluated the diagnostic accuracy of LUS in comparison with preoperative staging and laparoscopy in 33 patients with colorectal cancer. Preoperative staging included abdominal US, CT, and endoscopic US (for rectal cancer). Laparoscopy and LUS were performed in all cases. Pre- and intraoperative staging were related to definitive histology. Staging was done according to the TNM classification.",
+        "Pre- and intraoperative staging were related to definitive histology. Staging was done according to the TNM classification. LUS obtained good results in the evaluation of hepatic metastases, with a sensitivity of 100% versus 62.5% and 75% by preoperative diagnostic means and laparoscopy, respectively. Nodal metastases were diagnosed with a sensitivity of 94% versus 18% with preoperative staging and 6% with laparoscopy, but the method had a low specificity (53%). The therapeutic program was changed thanks to laparoscopy and LUS in 11 cases (33%). In four cases (12%), the planned therapeutic approach was changed after LUS alone."
+      ],
+      "generated_answer": "Laparoscopic sonography appears to be a highly sensitive method for detecting certain aspects of colorectal cancer, such as hepatic metastases and nodal metastases. It achieved a sensitivity of 100% for hepatic metastases and 94% for nodal metastases. However, its specificity was relatively low at 53%.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.15384615384615385,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.2222222222222222,
+        "med_entity_precision": 0.0,
+        "med_entity_recall": 0.0,
+        "med_entity_f1": 0.0,
+        "decision_match": 0.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 24.420911016874015,
+      "error": null
+    },
+    {
+      "sample_id": "medical_44",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Is irritable bowel syndrome a diagnosis of exclusion?",
+      "ground_truth": "Most community providers believe IBS is a diagnosis of exclusion; this belief is associated with increased resource use. Experts comply more closely with guidelines to diagnose IBS with minimal testing. This disconnect suggests that better implementation of guidelines is warranted to minimize variation and improve cost-effectiveness of care.",
+      "retrieved_chunks": [
+        "Guidelines emphasize that irritable bowel syndrome (IBS) is not a diagnosis of exclusion and encourage clinicians to make a positive diagnosis using the Rome criteria alone. Yet many clinicians are concerned about overlooking alternative diagnoses. We measured beliefs about whether IBS is a diagnosis of exclusion, and measured testing proclivity between IBS experts and community providers. We developed a survey to measure decision-making in two standardized patients with Rome III-positive IBS, including IBS with diarrhea (D-IBS) and IBS with constipation (C-IBS). The survey elicited provider knowledge and beliefs about IBS, including testing proclivity and beliefs regarding IBS as a diagnosis of exclusion. We surveyed nurse practitioners, primary care physicians, community gastroenterologists, and IBS experts. Experts were less likely than nonexperts to endorse IBS as a diagnosis of exclusion (8 vs.",
+        "Experts were less likely than nonexperts to endorse IBS as a diagnosis of exclusion (8 vs. 72%; P<0.0001). In the D-IBS vignette, experts were more likely to make a positive diagnosis of IBS (67 vs. 38%; P<0.001), to perform fewer tests (2.0 vs. 4.1; P<0.01), and to expend less money on testing (US$297 vs. $658; P<0.01). Providers who believed IBS is a diagnosis of exclusion ordered 1.6 more tests and consumed $364 more than others (P<0.0001). Experts only rated celiac sprue screening and complete blood count as appropriate in D-IBS; nonexperts rated most tests as appropriate. Parallel results were found in the C-IBS vignette."
+      ],
+      "generated_answer": "Guidelines emphasize that irritable bowel syndrome (IBS) is not a diagnosis of exclusion.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.09090909090909091,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.375,
+        "med_entity_precision": 0.8,
+        "med_entity_recall": 0.25,
+        "med_entity_f1": 0.38095238095238093,
+        "decision_match": 0.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 23.94424556568265,
+      "error": null
+    },
+    {
+      "sample_id": "medical_45",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Does the radiographic transition zone correlate with the level of aganglionosis on the specimen in Hirschsprung's disease?",
+      "ground_truth": "Correlation between level of radiographic transition zone on contrast enema and length of aganglionosis remains low. Systematic preoperative biopsy by coelioscopy or ombilical incision is mandatory.",
+      "retrieved_chunks": [
+        "The correlation between radiographic transition zone on contrast enema in Hirschsprung's disease and the total length of aganglionosis is known to be inaccurate. The aim of our study was to analyse this correlation more precisely to improve preoperative planning of the corrective surgery. From 1998 to 2009, 79 patients were operated on for Hirschsprung's disease. All available preoperative contrast enemas (n = 61) had been single blind reviewed by the same radiologist who defined the radiographic transition zone when present in vertebral level. Four groups were determined (rectal, rectosigmoid, long segment, and absence of transition zone) and by Kappa coefficient of agreement correlated to the length of aganglionosis in the pathological report.",
+        "Radiological findings were concordant with the specimen in pathology in 8 cases of 19 in rectal form (42 %), in 20 cases of 35 in rectosigmoid form (57 %), in all 6 cases of long-segment form (100 %), in the 2 cases of total colonic form (100 %) with a global agreement of 58.1 %, \u03ba = 0.39 CI [0.24; 0.57]."
+      ],
+      "generated_answer": "The correlation between radiographic findings and pathological reports in Hirschsprung's disease is not entirely accurate. However, the agreement between radiological findings and pathological reports does vary depending on the form of the disease. In general, the higher the level of aganglionosis, the more accurate the radiological findings tend to be.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.3333333333333333,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.5,
+        "med_entity_precision": 0.3333333333333333,
+        "med_entity_recall": 0.2857142857142857,
+        "med_entity_f1": 0.30769230769230765,
+        "decision_match": 1.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 27.580985178705305,
+      "error": null
+    },
+    {
+      "sample_id": "medical_46",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Prognostic factors for cervical spondylotic amyotrophy: are signs of spinal cord involvement associated with the neurological prognosis?",
+      "ground_truth": "The presence of a high signal intensity change on T2-weighted MRI and the pyramidal tract sign can be used as prognostic factors for patients with CSA.",
+      "retrieved_chunks": [
+        "The purpose of this study was to clarify the prognostic factors for cervical spondylotic amyotrophy (CSA). The authors retrospectively reviewed the medical records of 47 consecutive patients with CSA in whom the presence/absence of the pyramidal tract sign was noted. We analyzed whether the age, sex, presence of diabetes mellitus, medication (vitamin B12), type of the most atrophic and impaired muscle, the muscle strength at the presentation, the presence of the pyramidal tract sign, magnetic resonance imaging (MRI) findings, including the presence and number of T2 high signal intensity areas (T2 HIA) in the spinal cord and the conversion to surgery were associated with the recovery of muscle strength in the patients.",
+        "In addition, we also investigated whether the duration of symptoms before surgery and the type of surgery were associated with the recovery of muscle strength in patients who required conversion to surgical treatment. The presence of T2 HIA on MRI (P=0.002), the number of T2 HIA on MRI (P=0.002) and conversion to surgery (P=0.015) were found to be significantly associated with a poorer recovery at the observational final follow-up. Further, the presence of the pyramidal tract sign (P=0.043) was significantly associated with a poor recovery at the final follow-up after surgery."
+      ],
+      "generated_answer": "Signs of spinal cord involvement appear to be linked with a poorer neurological prognosis in patients with cervical spondylotic amyotrophy.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.6666666666666666,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.7142857142857143,
+        "med_entity_precision": 0.16666666666666666,
+        "med_entity_recall": 0.14285714285714285,
+        "med_entity_f1": 0.15384615384615383,
+        "decision_match": 0.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 22.357145479880273,
+      "error": null
+    },
+    {
+      "sample_id": "medical_47",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Prognosis of low-tone sudden deafness - does it inevitably progress to Meniere's disease?",
+      "ground_truth": "We conclude that not all low-tone sudden deafness (SD) patients suffered from endolymphatic hydrops even if they had vertigo attack at the onset and that electrocochleography (ECochG) was a useful prognostic tool.",
+      "retrieved_chunks": [
+        "Three of the seven patients with low-tone SD accompanied by vertigo had recurrent hearing loss; two of the three were subsequently confirmed to have Meniere's disease. The other four had a single episode. No difference in rate of progress from SD to Meniere's disease was observed among the low-tone and the high-tone SD groups. The average -SP/AP of each group with a single episode is smaller than that of other groups with recurrent episodes and Meniere's disease.",
+        "To investigate whether low-tone SD was a precursor of Meniere's disease and whether patients with low-tone SD suffered from endolymphatic hydrops. This was a retrospective case review in the university hospital. A total of 184 patients with low-tone SD were divided into two groups with single and recurrent episodes. The progress, follow-up audiograms, and ECochG results of the patients were reviewed and compared with those of patients with high-tone SD and Meniere's disease. In all, 83 of 177 patients with low-tone SD unaccompanied by vertigo had recurrent hearing loss; 15 of the 83 developed vertiginous attacks. The remaining 94 patients had a single episode. Three of the seven patients with low-tone SD accompanied by vertigo had recurrent hearing loss; two of the three were subsequently confirmed to have Meniere's disease."
+      ],
+      "generated_answer": "No, the prognosis of low-tone sudden deafness does not inevitably progress to Meniere's disease. In fact, no difference in the rate of progress from low-tone sudden deafness to Meniere's disease was observed between the low-tone and high-tone sudden deafness groups.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.3,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.5,
+        "med_entity_precision": 0.125,
+        "med_entity_recall": 0.125,
+        "med_entity_f1": 0.125,
+        "decision_match": 1.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 24.676634890027344,
+      "error": null
+    },
+    {
+      "sample_id": "medical_48",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Does angiotensin-converting enzyme-1 (ACE-1) gene polymorphism lead to chronic kidney disease among hypertensive patients?",
+      "ground_truth": "It is concluded that ACE-DD genotype may be a risk factor for the causation and development of chronic kidney failure among hypertensive patients.",
+      "retrieved_chunks": [
+        "Hypertension is one of the important contributing factors linked with both causation and development of kidney disease. It is a multifactorial, polygenic, and complex disorder due to interaction of several risk genes with environmental factors. The present study was aimed to explore genetic polymorphism in ACE-1 gene as a risk factor for CKD among hypertensive patients. Three hundred patients were enrolled in the study. Ninety were hypertensive patients with CKD taken as cases, whereas 210 hypertensive patients without CKD were taken as controls. Demographic data including age, sex, Body mass index (BMI), and other risk factors were also recorded. DNA was extracted from blood by salting out method. Genotyping of ACE gene was done by PCR technique.",
+        "Blood urea and serum creatinine levels were statistically significant in the two genotypes (p\u2009<\u20090.05). Total and HDL cholesterol were statistically significant for DD genotype of ACE gene (OR\u2009=\u20091.42, 95% CI\u2009=\u20090.72-2.81). Similarly, the risk for CKD among hypertensive patients was also associated with D allele of ACE gene (OR\u2009=\u20091.25, 95% CI\u2009=\u20090.86-1.79).",
+        "DNA was extracted from blood by salting out method. Genotyping of ACE gene was done by PCR technique. All the statistical analysis was done by using Epi Info and SPSS version 16 software (SPSS Inc., Chicago, IL). Mean age was higher in the control group (p\u2009<\u20090.05). Variables among two groups were compared out of which age, BMI, hemoglobin (Hb) was found to be statistically significant whereas other variables like systolic blood pressure, triglyceride and low-density lipoprotein were not. Blood urea and serum creatinine levels were statistically significant in the two genotypes (p\u2009<\u20090.05)."
+      ],
+      "generated_answer": "The study found that the risk for chronic kidney disease (CKD) among hypertensive patients was associated with the D allele of the ACE gene. This suggests that ACE-1 gene polymorphism may contribute to the development of CKD in hypertensive patients.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_precision_at_3": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.2857142857142857,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.75,
+        "med_entity_precision": 0.25,
+        "med_entity_recall": 0.375,
+        "med_entity_f1": 0.3,
+        "decision_match": 0.0,
+        "predicted_decision": "unknown"
+      },
+      "latency_s": 23.002672228962183,
+      "error": null
+    },
+    {
+      "sample_id": "medical_49",
+      "domain": "medical",
+      "variant": "hybrid",
+      "question": "Amblyopia: is visual loss permanent?",
+      "ground_truth": "Older people with a history of amblyopia who develop visual loss in the previously normal eye can experience recovery of visual function in the amblyopic eye over a period of time. This recovery in visual function occurs in the wake of visual loss in the fellow eye and the improvement appears to be sustained.",
+      "retrieved_chunks": [
+        "The records of 465 patients with an established diagnosis of age related macular degeneration who had attended a specialist macular clinic between 1990 and 1998 were scrutinised. A full clinical examination and standardised refraction had been carried out in 189 of these cases on a minimum of two occasions. Cases were looked for where an improvement of one or more lines of either distance or near acuity was recorded in the eye unaffected by macular disease. In each one of these cases the improvement in visual acuity could not be attributed to treatment of other existing pathology. 12 such cases were detected. In nine of these the eye showing improvement of acuity had a history of amblyopia. The mean improvement in distance and near acuity in amblyopic eyes by 12 months was 3.3 and 1.9 lines logMAR respectively.",
+        "The mean improvement in distance and near acuity in amblyopic eyes by 12 months was 3.3 and 1.9 lines logMAR respectively. The improvement in acuity generally occurred between 1 and 12 months from baseline and remained stable over the period of follow up."
+      ],
+      "generated_answer": "No, visual loss due to amblyopia is not permanent. In some cases, amblyopic eyes have shown improvement in visual acuity over time.",
+      "metrics": {
+        "context_precision_at_1": 1.0,
+        "context_recall_token": 1.0,
+        "context_recall_sentence": 0.25,
+        "mrr": 1.0,
+        "retrieval_medical_coverage": 0.26666666666666666,
+        "med_entity_precision": 0.4444444444444444,
+        "med_entity_recall": 0.26666666666666666,
+        "med_entity_f1": 0.33333333333333337,
+        "decision_match": 1.0,
+        "predicted_decision": "no"
+      },
+      "latency_s": 22.701490798033774,
+      "error": null
+    }
+  ]
+}

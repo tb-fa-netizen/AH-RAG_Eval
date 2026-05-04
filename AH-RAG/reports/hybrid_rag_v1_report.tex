@@ -1,0 +1,27 @@
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{lccccc}
+\toprule
+\textbf{variant} & \textbf{CP@5} & \textbf{CR (sentence)} & \textbf{Med. Entity F1} & \textbf{Decision Acc. (PubMedQA)} & \textbf{MRR} \\
+\midrule
+🔀 Hybrid + Rerank (Ours) & — & 0.370 ± 0.200 & 0.216 ± 0.144 & 0.420 ± 0.494 & 1.000 ± 0.000 \\
+\bottomrule
+\end{tabular}
+\caption{Medical RAG Evaluation Results (PubMedQA)}
+\label{{tab:rag_eval}}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{lccccc}
+\toprule
+\textbf{variant} & \textbf{CP@5} & \textbf{CR (sentence)} & \textbf{Char Prec. (Legal)} & \textbf{Char Recall (Legal)} & \textbf{MRR} \\
+\midrule
+🔀 Hybrid + Rerank (Ours) & 0.591 ± 0.415 & 0.330 ± 0.454 & 1.000 ± 0.000 & 0.989 ± 0.027 & 0.620 ± 0.438 \\
+\bottomrule
+\end{tabular}
+\caption{Legal RAG Evaluation Results (LegalBench-RAG)}
+\label{{tab:rag_eval}}
+\end{table}

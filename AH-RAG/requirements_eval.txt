@@ -1,0 +1,45 @@
+# ─── Core RAG Framework ──────────────────────────────────────────────────────
+llama-index-core>=0.10.0
+llama-index-embeddings-huggingface>=0.2.0
+llama-index-llms-ollama>=0.2.0
+llama-index-retrievers-bm25>=0.2.0
+llama-index-vector-stores-chroma>=0.1.0
+llama-index-postprocessor-flag-embedding-reranker>=0.1.0
+
+# ─── Local Models ─────────────────────────────────────────────────────────────
+sentence-transformers>=2.7.0          # BGE embeddings & cross-encoder reranker
+FlagEmbedding>=1.2.5                  # BGE reranker (FlagReranker)
+torch>=2.1.0                          # GPU inference
+transformers>=4.40.0
+accelerate>=0.27.0
+
+# ─── Evaluation Frameworks ────────────────────────────────────────────────────
+ragas>=0.1.9                          # Context Precision / Recall / Faithfulness
+datasets>=2.19.0                      # HuggingFace datasets (PubMedQA, BioASQ)
+evaluate>=0.4.1                       # HF evaluate library (ROUGE, BLEU, BERTScore)
+bert-score>=0.3.13                    # BERTScore for medical factuality
+
+# ─── Data Handling ────────────────────────────────────────────────────────────
+chromadb>=0.5.0
+pandas>=2.0.0
+numpy>=1.26.0
+tqdm>=4.66.0
+requests>=2.31.0
+gitpython>=3.1.40                     # Clone LegalBench-RAG from GitHub
+
+# ─── NLP & Medical ────────────────────────────────────────────────────────────
+nltk>=3.8.1
+spacy>=3.7.0
+scispacy>=0.5.4                       # Medical NER for terminology scoring
+# python -m spacy download en_core_sci_lg    (run manually after install)
+
+# ─── Visualization & Reporting ────────────────────────────────────────────────
+matplotlib>=3.8.0
+seaborn>=0.13.0
+plotly>=5.22.0
+tabulate>=0.9.0
+jinja2>=3.1.0
+weasyprint>=62.0                      # PDF report generation
+nest-asyncio>=1.6.0
+pyyaml>=6.0.1
+rich>=13.7.0                          # Beautiful terminal output

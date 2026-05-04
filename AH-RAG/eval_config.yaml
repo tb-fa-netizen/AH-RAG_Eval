@@ -1,0 +1,103 @@
+# ╔══════════════════════════════════════════════════════════════════════════╗
+# ║          RAG EVALUATION CONFIGURATION  (eval_config.yaml)               ║
+# ╚══════════════════════════════════════════════════════════════════════════╝
+
+# ── Local Model Settings ─────────────────────────────────────────────────────
+models:
+  # LLM backend: "ollama" | "vllm"
+  llm_backend: "vllm"
+
+  ollama:
+    base_url: "http://localhost:11434"
+    model: "llama3:8b"
+    context_window: 8192
+    temperature: 0.0
+    request_timeout: 120.0
+
+  vllm:
+    base_url: "http://localhost:8000/v1"
+    # model name must match --served-model-name of the running vLLM server
+    model: "meta-llama/Llama-3.1-8B-Instruct"
+    # local path used only when starting the server yourself (see below)
+    model_path: "/home/paritosh/casal/models/Meta-Llama-3-8B"
+    temperature: 0.0
+    max_tokens: 512
+
+  # Embedding model (local, HuggingFace) — CPU because torch+cu130 > driver 12.8
+  embedding:
+    model_name: "BAAI/bge-large-en-v1.5"   # 1024-dim, strong on medical+legal
+    device: "cpu"
+    batch_size: 32
+    max_length: 512
+    normalize_embeddings: true
+
+  # Cross-encoder reranker — CPU for same reason
+  reranker:
+    model_name: "BAAI/bge-reranker-large"
+    device: "cpu"
+    top_n: 5
+    batch_size: 16
+
+# ── Retrieval Settings ───────────────────────────────────────────────────────
+retrieval:
+  chunk_size: 200
+  chunk_overlap: 40
+  dense_top_k: 10
+  bm25_top_k: 8
+  hybrid_top_k: 10        # After fusion
+  rerank_top_n: 4         # After reranking (what LLM sees)
+  fusion_mode: "reciprocal_rerank"
+
+# ── Dataset Settings ─────────────────────────────────────────────────────────
+datasets:
+  # PubMedQA — medical Q&A on abstracts
+  pubmedqa:
+    hf_dataset: "qiaojin/PubMedQA"
+    split: "pqa_labeled"                # labeled subset has ground-truth answers
+    num_samples: 200                    # Increase for full eval; 200 is fast
+    answer_choices: ["yes", "no", "maybe"]
+
+  # Legal QA — CUAD local JSON (LegalBench-RAG corpus requires manual Dropbox download;
+  # CUAD is what it was built from and has identical char-level span structure)
+  legalbench_rag:
+    cuad_json_path: "/tmp/CUAD_v1/CUAD_v1.json"
+    num_samples: 150
+
+  # BioASQ (optional extra medical)
+  bioasq:
+    enabled: false
+    hf_dataset: "rag-datasets/rag-mini-bioasq"
+    num_samples: 100
+
+# ── RAGAS Evaluation Settings ────────────────────────────────────────────────
+ragas:
+  metrics:
+    - "context_precision"
+    - "context_recall"
+    - "faithfulness"
+    - "answer_relevancy"
+  batch_size: 10
+  # Whether to use LLM-based RAGAS metrics (needs working LLM) or token-overlap fallback
+  use_llm_judge: true
+
+# ── Domain-Specific Metrics ──────────────────────────────────────────────────
+domain_metrics:
+  medical:
+    bertscore_model: "dmis-lab/biobert-v1.1"   # Domain-tuned BERT for BERTScore
+    use_scispacy_ner: true                       # Medical entity F1
+    scispacy_model: "en_core_sci_lg"
+    factuality_threshold: 0.70                   # Min BERTScore F1 to pass
+
+  legal:
+    precision_at_k: [1, 3, 5, 10]
+    use_char_level_overlap: true                 # LegalBench-RAG uses char-level
+    char_overlap_threshold: 0.50                 # ≥50% char overlap = relevant
+
+# ── Output Settings ──────────────────────────────────────────────────────────
+output:
+  results_dir: "./results"
+  reports_dir: "./reports"
+  save_per_sample: true         # Save individual sample results (for debugging)
+  generate_html_report: true
+  generate_pdf_report: false    # Requires weasyprint
+  experiment_name: "hybrid_rag_v1"
